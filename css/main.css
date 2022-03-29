@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap");
+/* 
+ form {
+  font-family: "Markazi Text", serif;
+  font-size: 1.25rem !important;
+  font-weight: bold;
+} */
+/* 
+.type-alter-list {
+  font-family: "Markazi Text", serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-section {
+  font-size: 1.35em;
+}
+.form-item-title span {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.form-item-title{
+    margin-top: 1.35em;
+} */
+.type-alter-list {
+  font-family: "Markazi Text", serif;
+  font-weight: bold;
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.form-item-title span {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+.form-item-title h4 {
+  font-size: 1.1rem;
+  display: inline;
+}
+
+@media screen and (min-width: 992px) {
+  .type-alter-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
