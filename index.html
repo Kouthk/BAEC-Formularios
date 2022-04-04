@@ -20,6 +20,10 @@
     <!--FontAwensome 5.14 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
+    <!-- Slim Select  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet">
+    </link>
+
 </head>
 
 <body class="d-flex flex-column">
@@ -101,7 +105,7 @@
             </div>
         </section>
 
-        <form action="" method="post" name="form" id="requisition-form">
+        <form class="needs-validation" action="" method="post" name="form" id="requisition-form" novalidate>
             <input type="hidden" name="csrfmiddlewaretoken"
                 value="dbTzxNYfqXrzNd8xEd5kxnfTKKHAWxE31jiz1yF21fjl4Gi4r2Oue5Ugid9WFLR7">
             <div class="form-item pb-4">
@@ -115,82 +119,115 @@
                         <div class="form-group mb-0 nav-breadcrumb-bg type-alter-list">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1">
+                                    value="CADASTRAMENTO">
                                 <label class="form-check-label" for="inlineRadio1">CADASTRAMENTO</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2">
+                                    value="ALTERAÇÃO">
                                 <label class="form-check-label" for="inlineRadio2"> ALTERAÇÃO</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                    value="option3">
+                                    value="BAIXA">
                                 <label class="form-check-label" for="inlineRadio3">BAIXA</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                                    value="option4">
+                                    value="RECADASTRAMENTO">
                                 <label class="form-check-label" for="inlineRadio4">RECADASTRAMENTO</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
-                                    value="option5">
+                                    value="SUSPENSÃO">
                                 <label class="form-check-label" for="inlineRadio5">SUSPENSÃO</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
-                                    value="option6">
+                                    value="REATIVAÇÃO">
                                 <label class="form-check-label" for="inlineRadio6">REATIVAÇÃO</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Fim do Select forms -->
-                <section id="identificacao">
+                <section id="identificacao" class="tab">
                     <div class="form-item-title">
                         <span class="fas fa-address-card " aria-hidden="true"></span>
                         <h4 class="title-section">IDENTIFICAÇÃO</h4>
                         <hr>
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="cpf">CNPJ/CPF</label>
-                        <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                        <label for="cnpj_cpf_identificacao">CNPJ/CPF</label>
+                        <input type="text" name="cnpj_cpf_identificacao" class="form-control"
+                            id="id_cnpj_cpf_identificacao" maxlength="14" required>
+                        <div class="valid-feedback">
+                            Parece bom!
+                        </div>
+                        <div class="invalid-feedback">
+                            Forneça uma Informação válida.
+                        </div>
                     </div>
                     <div class="form-group col-lg-6 ">
-                        <label for="name">Inscrição Municipal - CMC</label>
-                        <input type="text" name="name" maxlength="255" class="form-control" id="id_name">
+                        <label for="cmc_identificacao">Inscrição Municipal - CMC</label>
+                        <input type="text" name="cmc_identificacao" maxlength="255" class="form-control"
+                            id="id_cmc_identificacao" required>
+                        <div class="valid-feedback">
+                            Parece bom!
+                        </div>
                     </div>
                     <div class="form-group col-lg-6 ">
-                        <label for="name">Data de Abertura</label>
+                        <label for="dataAbertura_identificacao">Data de Abertura</label>
+                        <input type="date" name="dataAbertura_identificacao" maxlength="20" class="form-control"
+                            id="id_dataAbertura_identificacao">
+                        <div class="valid-feedback">
+                            Parece bom!
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 ">
+                        <label for="rg_identificacao">Inscrição Eestadual / RG</label>
+                        <input type="text" name="rg_identificacao" maxlength="255" class="form-control"
+                            id="id_rg_identificacao">
+                        <div class="valid-feedback">
+                            Parece bom!
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 ">
+                        <label for="rjcCartorio_identificacao">Registro de Junta Comercial / Cartório</label>
+                        <input type="text" name="rjcCartorio_identificacao" maxlength="255" class="form-control"
+                            id="id_rjcCartorio_identificacao">
+                        <div class="valid-feedback">
+                            Parece bom!
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 ">
+                        <label for="dataResgistro">Data Registro</label>
                         <input type="date" name="name" maxlength="255" class="form-control" id="id_name">
-                    </div>
-                    <div class="form-group col-lg-6 ">
-                        <label for="name">Inscrição Eestadual / RG</label>
-                        <input type="text" name="name" maxlength="255" class="form-control" id="id_name">
-                    </div>
-                    <div class="form-group col-lg-6 ">
-                        <label for="name">Registro de Junta Comercial / Cartório</label>
-                        <input type="text" name="name" maxlength="255" class="form-control" id="id_name">
-                    </div>
-                    <div class="form-group col-lg-6 ">
-                        <label for="name">Data Registro</label>
-                        <input type="text" name="name" maxlength="255" class="form-control" id="id_name">
+                        <div class="valid-feedback">
+                            Parece bom!
+                        </div>
                     </div>
                     <div class="form-group col-lg-12 ">
-                        <label for="name">Nome Fantasia</label>
-                        <input type="text" name="name" maxlength="255" class="form-control" id="id_name">
+                        <label for="nameRazaoSocial_identificacao">Nome / Razão Social</label>
+                        <input type="text" name="nameRazaoSocial_identificacao" maxlength="255" class="form-control"
+                            id="id_nameRazaoSocial_identificacao">
                     </div>
                     <div class="form-group col-lg-12 ">
-                        <label for="name">E-mail</label>
-                        <input type="email" name="name" maxlength="255" class="form-control" id="id_name">
+                        <label for="nameFantasia_identificacao">Nome Fantasia</label>
+                        <input type="text" name="nameFantasia_identificacao" maxlength="255" class="form-control"
+                            id="id_nameFantasia_identificacao">
+                    </div>
+                    <div class="form-group col-lg-12 ">
+                        <label for="email_identificacao">E-mail</label>
+                        <input type="email" name="email_identificacao" maxlength="255" class="form-control"
+                            id="id_email_identificacao">
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Observações Relevantes</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="obsRelevante_identificacao">Observações Relevantes</label>
+                        <textarea class="form-control" id="id_obsRelevante_identificacao" rows="3" placeholder="Digite aqui..."></textarea>
                     </div>
                 </section>
-                <section id="identificacao">
+                <section id="atividadeEconomica" class="tab">
                     <div class="form-item-title ">
                         <span class="fas fa-money-check-alt" aria-hidden="true"></span>
                         <h4 class="title-section">ATIVIDADE ECONOMICA</h4>
@@ -209,22 +246,26 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="select-CNAEs">Selecione o CNAE'S</label>
-                        <select id="select-CNAEs" class="form-select" multiple aria-label="multiple select example">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <label for="select-CNAEs">Selecione o CNAEs Principal</label>
+                        <select id="select-CNAEs-principal" class="form-select" aria-label="multiple select example"
+                            autocomplete="off">
+                            <option value="1">Contate o suporte</option>
+                            <option value="2">Contate o suporte</option>
+                            <option value="3">Contate o suporte</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-CNAEs">Selecione os CNAEs Secundarios</label>
+                        <select id="select-CNAEs-secundario" class="" multiple aria-label="multiple select example">
+                            <option value="1">Contate o suporte</option>
+                            <option value="2">Contate o suporte</option>
+                            <option value="3">Contate o suporte</option>
                         </select>
                     </div>
 
                 </section>
-                <section id="logadouro">
+                <section id="logadouro" class="tab">
                     <div class="form-group pb-2">
                         <div class="form-item-title ">
                             <span class="fas fa-map-marked-alt" aria-hidden="true"></span>
@@ -233,87 +274,87 @@
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="cpf">Logradouro</label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                         <div class="form-group col-lg-3">
                             <label for="cpf">Número</label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="cpf">bairro</label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="cpf">Complemento</label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="cpf">CEP</label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="cpf">Telefone </label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="cpf">Cidade</label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                         <div class="form-group col-lg-6">
                             <label for="cpf">UF</label>
-                            <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
                         </div>
                     </div>
-                        <div class="form-group">
-                            <div class="form-item-title ">
-                                <span class="far fa-envelope-open" aria-hidden="true"></span>
-                                <h3>Endereço de Correspondência</h3>
-                                <hr>
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <label for="cpf">Logradouro</label>
-                                <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
-                            </div>
-                            <div class="form-group col-lg-3">
-                                <label for="cpf">Número</label>
-                                <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <label for="cpf">bairro</label>
-                                <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <label for="cpf">Complemento</label>
-                                <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label for="cpf">CEP</label>
-                                <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
-                            </div>
-
-                            <div class="form-group col-lg-6">
-                                <label for="cpf">Cidade</label>
-                                <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
-                            </div>
-                            <div class="form-group col-lg-3">
-                                <label for="cpf">UF</label>
-                                <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
-                            </div>
+                    <div class="form-group">
+                        <div class="form-item-title ">
+                            <span class="far fa-envelope-open" aria-hidden="true"></span>
+                            <h3>Endereço de Correspondência</h3>
+                            <hr>
                         </div>
+                        <div class="form-group col-lg-6">
+                            <label for="cpf">Logradouro</label>
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="cpf">Número</label>
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="cpf">bairro</label>
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="cpf">Complemento</label>
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="cpf">CEP</label>
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label for="cpf">Cidade</label>
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="cpf">UF</label>
+                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        </div>
+                    </div>
                 </section>
-                <section id="proprietario">
+                <section id="proprietario" class="tab">
                     <div class="form-item-title ">
                         <span class="fas fa-user-tie" aria-hidden="true"></span>
                         <h4 class="title-section">PROPRIETÁRIO</h4>
                         <hr>
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-lg-6">
                         <label for="cpf">Nome/Razão Social</label>
-                        <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                        <input type="text" name="cpf" class="form-control" id="id_cpf">
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-lg-6">
                         <label for="cpf">Nome da Mãe</label>
-                        <input type="text" name="cpf" class="form-control" maxlength="14" id="id_cpf">
+                        <input type="text" name="cpf" class="form-control" id="id_cpf">
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="select-estado-civil">Estado Civil</label>
@@ -328,69 +369,51 @@
                     </div>
                     <div class="form-group col-lg-3">
                         <label for="data-nascimento-proprietario">Data de Nascimento</label>
-                        <input type="date" name="data-nascimento-proprietario" class="form-control" maxlength="14"
+                        <input type="date" name="data-nascimento-proprietario" class="form-control"
                             id="data-nascimento-proprietario">
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="data-nascimento-proprietario">CPF / CNPJ</label>
-                        <input type="text" name="data-nascimento-proprietario" class="form-control" maxlength="14"
+                        <input type="text" name="data-nascimento-proprietario" class="form-control"
                             id="data-nascimento-proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="Logradouro-proprietario">Logradouro</label>
-                        <input type="text" name="Logradouro-proprietario" class="form-control" maxlength="14"
-                            id="Logradouro-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Número</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">bairro</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Cidade</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">UF</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Complemento</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">CEP</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Complemento</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Complemento</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Telefone</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
+                        <label for="numero-proprietario">E-mail</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
 
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">E-mail</label>
-                        <input type="text" name="numero-proprietario" class="form-control" maxlength="14"
-                            id="numero-proprietario">
+                        <label for="Logradouro-proprietario">Logradouro</label>
+                        <input type="text" name="Logradouro-proprietario" class="form-control"
+                            id="Logradouro-proprietario">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="numero-proprietario">Número</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="numero-proprietario">bairro</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="numero-proprietario">Cidade</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="numero-proprietario">UF</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="numero-proprietario">Complemento</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="numero-proprietario">CEP</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="numero-proprietario">Telefone</label>
+                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
 
                     </div>
                 </section>
@@ -421,6 +444,22 @@
                     </div>
                 </div>
             </div>
+
+            <div style="float:right;">
+                <button class="btn btn-success" type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                <button class="btn btn-success" type="button" id="nextBtn" onclick="nextPrev(1)">Proxímo</button>
+            </div>
+
+
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+
+
             <div class="py-3 text-center">
                 <button type="submit" id="submit" class="btn btn-secondary">Gerar Requerimento</button>
             </div>
@@ -451,6 +490,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+        <!-- Slim Select -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
+
+
+
+        <script src="./js/main.js"></script>
+        <script src="./js/validation.js"></script>
 </body>
 
 </html>

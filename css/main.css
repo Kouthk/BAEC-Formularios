@@ -25,6 +25,9 @@
 .form-item-title{
     margin-top: 1.35em;
 } */
+* {
+  box-sizing: border-box;
+}
 .type-alter-list {
   font-family: "Markazi Text", serif;
   font-weight: bold;
@@ -52,4 +55,41 @@
     display: flex;
     justify-content: space-between;
   }
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+#prevBtn {
+  background-color: #e2e2e2;
+  color: #000;
+  margin-right: 7px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04aa6d;
 }
