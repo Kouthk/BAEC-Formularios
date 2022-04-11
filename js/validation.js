@@ -11,6 +11,7 @@
       "submit",
       function (event) {
         console.log("ola, dentro do if");
+        console.log(event)
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
@@ -35,5 +36,4 @@ function validar() {
   }
 } */
 
-/* document.getElementById("nextBtn").addEventListener("click", validar);
- */
+

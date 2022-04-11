@@ -174,7 +174,7 @@ ul li {padding-bottom: 1.25rem;}
 /* Forms */
 .form-text { font-size: .9rem; }
 
-.form-control { border-color: #cecece !important; }
+.form-control { border-color: #cecece; }
 
 .input-group-text { background-color: #e6e6e6; }
 

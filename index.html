@@ -19,7 +19,6 @@
 
     <!--FontAwensome 5.14 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
     <!-- Slim Select  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet">
     </link>
@@ -31,8 +30,8 @@
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
                 <a class="topbar-brand mr-1" href="http://www.rondonopolis.mt.gov.br/">
-                    <img src="./img/brasao.png" title="Prefeitura Municipal de Rondonópolis" loading="lazy"
-                        class="img-fluid mr-lg-1">
+                    <img src="./img/brasao.png" title="Prefeitura Municipal de
+                        Rondonópolis" loading="lazy" class="img-fluid mr-lg-1">
                     <span class="d-none d-lg-inline">Prefeitura de </span>Rondonópolis
                 </a>
                 <div class="accessibility ml-auto">
@@ -69,7 +68,8 @@
     </section>
 
     <!-- Cabeçalho -->
-    <header class="header overlay-header" style="background-image: url(./img/background.jpg);">
+    <header class="header overlay-header" style="background-image:
+        url(./img/background.jpg);">
         <div class="container text-center">
             <h1>Secretaria de Receita</h1>
             <h2>Informações e Serviços</h2>
@@ -104,8 +104,8 @@
                 </div>
             </div>
         </section>
-
-        <form class="needs-validation" action="" method="post" name="form" id="requisition-form" novalidate>
+        <form class="needs-validation" action="/pageImpressao.html" method="post" name="form" id="requisition-form"
+            novalidate>
             <input type="hidden" name="csrfmiddlewaretoken"
                 value="dbTzxNYfqXrzNd8xEd5kxnfTKKHAWxE31jiz1yF21fjl4Gi4r2Oue5Ugid9WFLR7">
             <div class="form-item pb-4">
@@ -116,34 +116,35 @@
                             <span class="fas fa-exclamation-circle mr-1"></span>
                             <strong> SELECIONE O TIPO DE REQUISIÇÃO: </strong>
                         </div>
-                        <div class="form-group mb-0 nav-breadcrumb-bg type-alter-list">
+                        <div class="form-group mb-0 nav-breadcrumb-bg
+                            type-alter-list">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="CADASTRAMENTO">
+                                <input class="form-check-input" type="radio" name="tipoRequisiçãoDoc" id="inlineRadio1"
+                                    value="CADASTRAMENTO" required>
                                 <label class="form-check-label" for="inlineRadio1">CADASTRAMENTO</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                <input class="form-check-input" type="radio" name="tipoRequisiçãoDoc" id="inlineRadio2"
                                     value="ALTERAÇÃO">
                                 <label class="form-check-label" for="inlineRadio2"> ALTERAÇÃO</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                <input class="form-check-input" type="radio" name="tipoRequisiçãoDoc" id="inlineRadio3"
                                     value="BAIXA">
                                 <label class="form-check-label" for="inlineRadio3">BAIXA</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                <input class="form-check-input" type="radio" name="tipoRequisiçãoDoc" id="inlineRadio4"
                                     value="RECADASTRAMENTO">
                                 <label class="form-check-label" for="inlineRadio4">RECADASTRAMENTO</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                                <input class="form-check-input" type="radio" name="tipoRequisiçãoDoc" id="inlineRadio5"
                                     value="SUSPENSÃO">
                                 <label class="form-check-label" for="inlineRadio5">SUSPENSÃO</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
+                                <input class="form-check-input" type="radio" name="tipoRequisiçãoDoc" id="inlineRadio6"
                                     value="REATIVAÇÃO">
                                 <label class="form-check-label" for="inlineRadio6">REATIVAÇÃO</label>
                             </div>
@@ -151,32 +152,32 @@
                     </div>
                 </div>
                 <!-- Fim do Select forms -->
-                <section id="identificacao" class="tab">
+                <section id="identificacao">
                     <div class="form-item-title">
-                        <span class="fas fa-address-card " aria-hidden="true"></span>
+                        <span class="fas fa-address-card" aria-hidden="true"></span>
                         <h4 class="title-section">IDENTIFICAÇÃO</h4>
                         <hr>
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="cnpj_cpf_identificacao">CNPJ/CPF</label>
                         <input type="text" name="cnpj_cpf_identificacao" class="form-control"
-                            id="id_cnpj_cpf_identificacao" maxlength="14" required>
+                            id="id_cnpj_cpf_identificacao" minlength="10" maxlength="20" required>
                         <div class="valid-feedback">
-                            Parece bom!
+                            Preenchido com sucesso
                         </div>
                         <div class="invalid-feedback">
                             Forneça uma Informação válida.
                         </div>
                     </div>
-                    <div class="form-group col-lg-6 ">
+                    <div class="form-group col-lg-6">
                         <label for="cmc_identificacao">Inscrição Municipal - CMC</label>
-                        <input type="text" name="cmc_identificacao" maxlength="255" class="form-control"
-                            id="id_cmc_identificacao" required>
+                        <input type="text" name="cmc_identificacao" class="form-control" id="id_cmc_identificacao"
+                            required>
                         <div class="valid-feedback">
-                            Parece bom!
+
                         </div>
                     </div>
-                    <div class="form-group col-lg-6 ">
+                    <div class="form-group col-lg-6">
                         <label for="dataAbertura_identificacao">Data de Abertura</label>
                         <input type="date" name="dataAbertura_identificacao" maxlength="20" class="form-control"
                             id="id_dataAbertura_identificacao">
@@ -184,181 +185,228 @@
                             Parece bom!
                         </div>
                     </div>
-                    <div class="form-group col-lg-6 ">
-                        <label for="rg_identificacao">Inscrição Eestadual / RG</label>
-                        <input type="text" name="rg_identificacao" maxlength="255" class="form-control"
-                            id="id_rg_identificacao">
+                    <div class="form-group col-lg-6">
+                        <label for="rg_identificacao">Inscrição Estadual / RG</label>
+                        <input type="text" name="rg_identificacao" class="form-control" id="id_rg_identificacao">
                         <div class="valid-feedback">
                             Parece bom!
                         </div>
                     </div>
-                    <div class="form-group col-lg-6 ">
-                        <label for="rjcCartorio_identificacao">Registro de Junta Comercial / Cartório</label>
-                        <input type="text" name="rjcCartorio_identificacao" maxlength="255" class="form-control"
+                    <div class="form-group col-lg-6">
+                        <label for="rjcCartorio_identificacao">Registro de Junta
+                            Comercial / Cartório</label>
+                        <input type="text" name="rjcCartorio_identificacao" class="form-control"
                             id="id_rjcCartorio_identificacao">
                         <div class="valid-feedback">
                             Parece bom!
                         </div>
                     </div>
-                    <div class="form-group col-lg-6 ">
-                        <label for="dataResgistro">Data Registro</label>
-                        <input type="date" name="name" maxlength="255" class="form-control" id="id_name">
+                    <div class="form-group col-lg-6">
+                        <label for="dataResgistro_identificacao">Data Registro</label>
+                        <input type="date" name="dataResgistro_identificacao" class="form-control"
+                            id="id_dataResgistro_identificacao">
                         <div class="valid-feedback">
                             Parece bom!
                         </div>
                     </div>
-                    <div class="form-group col-lg-12 ">
-                        <label for="nameRazaoSocial_identificacao">Nome / Razão Social</label>
-                        <input type="text" name="nameRazaoSocial_identificacao" maxlength="255" class="form-control"
+                    <div class="form-group col-lg-12">
+                        <label for="nameRazaoSocial_identificacao">Nome / Razão
+                            Social</label>
+                        <input type="text" name="nameRazaoSocial_identificacao" class="form-control"
                             id="id_nameRazaoSocial_identificacao">
                     </div>
-                    <div class="form-group col-lg-12 ">
+                    <div class="form-group col-lg-12">
                         <label for="nameFantasia_identificacao">Nome Fantasia</label>
-                        <input type="text" name="nameFantasia_identificacao" maxlength="255" class="form-control"
+                        <input type="text" name="nameFantasia_identificacao" class="form-control"
                             id="id_nameFantasia_identificacao">
                     </div>
-                    <div class="form-group col-lg-12 ">
+                    <div class="form-group col-lg-12">
                         <label for="email_identificacao">E-mail</label>
-                        <input type="email" name="email_identificacao" maxlength="255" class="form-control"
-                            id="id_email_identificacao">
+                        <input type="email" name="email_identificacao" class="form-control" id="id_email_identificacao">
                     </div>
                     <div class="form-group">
-                        <label for="obsRelevante_identificacao">Observações Relevantes</label>
-                        <textarea class="form-control" id="id_obsRelevante_identificacao" rows="3" placeholder="Digite aqui..."></textarea>
+                        <label for="obsRelevante_identificacao">Observações
+                            Relevantes</label>
+                        <textarea class="form-control" id="id_obsRelevante_identificacao" rows="3"
+                            placeholder="Digite aqui..."></textarea>
                     </div>
                 </section>
-                <section id="atividadeEconomica" class="tab">
-                    <div class="form-item-title ">
+                <section id="atividadeEconomica">
+                    <div class="form-item-title">
                         <span class="fas fa-money-check-alt" aria-hidden="true"></span>
                         <h4 class="title-section">ATIVIDADE ECONOMICA</h4>
                         <hr>
                     </div>
                     <div class="form-group">
-                        <label for="select-atividade-economica">Selecione a Atividade Economica</label>
-                        <select id='select-atividade-economica' class="form-select" aria-label=" select example">
+                        <label for="select_atividadeEconomica">Selecione a
+                            Atividade Economica</label>
+                        <select id='select_atividadeEconomica' class="form-select" aria-label="select example">
                             <option selected>Selecione a Atividade Economica</option>
                             <option value="19-Indústria">19 - Indústria</option>
                             <option value="27-Comércio">27 - Comércio</option>
                             <option value="35-Serviços">35 - Serviços</option>
-                            <option value="51-Indústria/Serviços">51 - Indústria / Serviços</option>
-                            <option value="60-Indústria/Comércio">60 - Indústria / Comércio</option>
-                            <option value="78-Comércio/Serviços">78 - Comércio / Serviços</option>
+                            <option value="51-Indústria/Serviços">51 - Indústria
+                                / Serviços</option>
+                            <option value="60-Indústria/Comércio">60 - Indústria
+                                / Comércio</option>
+                            <option value="78-Comércio/Serviços">78 - Comércio /
+                                Serviços</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="select-CNAEs">Selecione o CNAEs Principal</label>
-                        <select id="select-CNAEs-principal" class="form-select" aria-label="multiple select example"
-                            autocomplete="off">
-                            <option value="1">Contate o suporte</option>
-                            <option value="2">Contate o suporte</option>
-                            <option value="3">Contate o suporte</option>
+                        <label for="select_CNAEs_atividadeEconomica">Selecione o
+                            CNAEs Principal</label>
+                        <select id="select_CNAEs_atividadeEconomica" aria-label="Selecione o CNAE principal" required>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="select-CNAEs">Selecione os CNAEs Secundarios</label>
-                        <select id="select-CNAEs-secundario" class="" multiple aria-label="multiple select example">
-                            <option value="1">Contate o suporte</option>
-                            <option value="2">Contate o suporte</option>
-                            <option value="3">Contate o suporte</option>
+                        <label for="select_CNAEs_secundario_atividadeEconomica">Selecione
+                            os CNAEs
+                            Secundarios</label>
+                        <select id="select_CNAEs_secundario_atividadeEconomica" multiple
+                            aria-label="Selecione os CNAE's secundario" required>
                         </select>
                     </div>
-
                 </section>
-                <section id="logadouro" class="tab">
+
+                <section id="localizacao_das_atividades">
                     <div class="form-group pb-2">
-                        <div class="form-item-title ">
+                        <div class="form-item-title">
                             <span class="fas fa-map-marked-alt" aria-hidden="true"></span>
                             <h3>Localização das atividades</h3>
                             <hr>
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">Logradouro</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="logradouro_localizacao_das_atividades">Logradouro</label>
+                            <input type="text" name="logradouro_localizacao_das_atividades" class="form-control"
+                                id="id_logradouro_localizacao_das_atividades">
                         </div>
                         <div class="form-group col-lg-3">
-                            <label for="cpf">Número</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="n_localizacao_das_atividades">Número</label>
+                            <input type="text" name="n_localizacao_das_atividades" class="form-control"
+                                id="id_n_localizacao_das_atividades">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">bairro</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="bairro_localizacao_das_atividades">bairro</label>
+                            <input type="text" name="bairro_localizacao_das_atividades" class="form-control"
+                                id="id_bairro_localizacao_das_atividades">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">Complemento</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="complementar_localizacao_das_atividades">Complemento</label>
+                            <input type="text" name="complementar_localizacao_das_atividades" class="form-control"
+                                id="id_complementar_localizacao_das_atividades">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">CEP</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="cep_localizacao_das_atividades">CEP</label>
+                            <input type="text" name="cep_localizacao_das_atividades" class="form-control"
+                                id="id_cep_localizacao_das_atividades">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">Telefone </label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="telefone_localizacao_das_atividades">Telefone
+                            </label>
+                            <input type="text" name="telefone_localizacao_das_atividades" class="form-control"
+                                id="id_telefone_localizacao_das_atividades">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">Cidade</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="cidade_localizacao_das_atividades">Cidade</label>
+                            <input type="text" name="cidade_localizacao_das_atividades" class="form-control"
+                                id="id_cidade_localizacao_das_atividades">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">UF</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="uf_localizacao_das_atividades">UF</label>
+                            <input type="text" name="uf_localizacao_das_atividades" class="form-control"
+                                id="id_uf_localizacao_das_atividades">
+                        </div>
+                        <div class="form-group">
+                            <label for="endrecoIgual_localizacao_das_atividades">Usar
+                                esse endereço como Endereço de
+                                correspondencia?</label>
+                            <div id="endereco_igual" class="col-lg-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio"
+                                        name="endrecoIgual_localizacao_das_atividades"
+                                        id="endrecoIgual_op1_localizacao_das_atividades" value="1" checked required>
+                                    <label class="form-check-label"
+                                        for="endrecoIgual_op1_localizacao_das_atividades">Sim</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio"
+                                        name="endrecoIgual_localizacao_das_atividades"
+                                        id="endrecoIgual_op2_localizacao_das_atividades" value="0">
+                                    <label class="form-check-label"
+                                        for="endrecoIgual_op2_localizacao_das_atividades">Não</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </section>
+                <section id="endereco_correspondencia" class="d-none">
                     <div class="form-group">
-                        <div class="form-item-title ">
+                        <div class="form-item-title">
                             <span class="far fa-envelope-open" aria-hidden="true"></span>
                             <h3>Endereço de Correspondência</h3>
                             <hr>
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">Logradouro</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="Logradouro_endereco_correspondencia">Logradouro</label>
+                            <input type="text" name="Logradouro_endereco_correspondencia" class="form-control"
+                                id="id_Logradouro_endereco_correspondencia">
                         </div>
                         <div class="form-group col-lg-3">
-                            <label for="cpf">Número</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="n_endereco_correspondencia">Número</label>
+                            <input type="text" name="n_endereco_correspondencia" class="form-control"
+                                id="id_Logradouro_endereco_correspondencia">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">bairro</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="bairro_endereco_correspondencia">bairro</label>
+                            <input type="text" name="bairro_endereco_correspondencia" class="form-control"
+                                id="id_bairro_endereco_correspondencia">
                         </div>
                         <div class="form-group col-lg-6">
-                            <label for="cpf">Complemento</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="complemento_endereco_correspondencia">Complemento</label>
+                            <input type="text" name="Complemento_endereco_correspondencia" class="form-control"
+                                id="id_Complemento_endereco_correspondencia">
                         </div>
                         <div class="form-group col-lg-4">
-                            <label for="cpf">CEP</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="cep_endereco_correspondencia">CEP</label>
+                            <input type="text" name="cep_endereco_correspondencia" class="form-control"
+                                id="id_cep_endereco_correspondencia">
                         </div>
 
                         <div class="form-group col-lg-6">
-                            <label for="cpf">Cidade</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="cidade_endereco_correspondencia">Cidade</label>
+                            <input type="text" name="cidade_endereco_correspondencia" class="form-control"
+                                id="id_cidade_endereco_correspondencia">
                         </div>
                         <div class="form-group col-lg-3">
-                            <label for="cpf">UF</label>
-                            <input type="text" name="cpf" class="form-control" id="id_cpf">
+                            <label for="uf_endereco_correspondencia">UF</label>
+                            <input type="text" name="uf_endereco_correspondencia" class="form-control"
+                                id="id_uf_endereco_correspondencia">
                         </div>
                     </div>
                 </section>
-                <section id="proprietario" class="tab">
-                    <div class="form-item-title ">
+                <section id="proprietario">
+                    <div class="form-item-title">
                         <span class="fas fa-user-tie" aria-hidden="true"></span>
                         <h4 class="title-section">PROPRIETÁRIO</h4>
                         <hr>
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="cpf">Nome/Razão Social</label>
-                        <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        <label for="nomeRazaoSocial_proprietario">Nome/Razão
+                            Social</label>
+                        <input type="text" name="nomeRazaoSocial_proprietario" class="form-control"
+                            id="id_nomeRazaoSocial_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="cpf">Nome da Mãe</label>
-                        <input type="text" name="cpf" class="form-control" id="id_cpf">
+                        <label for="nome_mae_proprietario">Nome da Mãe</label>
+                        <input type="text" name="nome_mae_proprietario" class="form-control"
+                            id="id_nome_mae_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="select-estado-civil">Estado Civil</label>
-                        <select id='select-estado-civil' class="form-select" aria-label=" select example">
+                        <label for="select_estado_civil_proprietario">Estado
+                            Civil</label>
+                        <select id='select_estado_civil_proprietario' class="form-select" aria-label="select example">
                             <option selected>Selecione o Estado Civil</option>
                             <option value="Solteiro">Solteiro</option>
                             <option value="Casado">Casado</option>
@@ -368,100 +416,98 @@
                         </select>
                     </div>
                     <div class="form-group col-lg-3">
-                        <label for="data-nascimento-proprietario">Data de Nascimento</label>
-                        <input type="date" name="data-nascimento-proprietario" class="form-control"
-                            id="data-nascimento-proprietario">
+                        <label for="data_nascimento_proprietario">Data de
+                            Nascimento</label>
+                        <input type="date" name="data_nascimento_proprietario" class="form-control"
+                            id="id_data_nascimento_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="data-nascimento-proprietario">CPF / CNPJ</label>
-                        <input type="text" name="data-nascimento-proprietario" class="form-control"
-                            id="data-nascimento-proprietario">
+                        <label for="cpf_ou_cnpj_proprietario">CPF / CNPJ</label>
+                        <input type="text" name="cpf_ou_cnpj_proprietario" class="form-control"
+                            id="id_cpf_ou_cnpj_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">E-mail</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
-
+                        <label for="email_proprietario">E-mail</label>
+                        <input type="email" name="email_proprietario" class="form-control" id="id_email_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="Logradouro-proprietario">Logradouro</label>
-                        <input type="text" name="Logradouro-proprietario" class="form-control"
-                            id="Logradouro-proprietario">
+                        <label for="logradouro_proprietario">Logradouro</label>
+                        <input type="text" name="logradouro_proprietario" class="form-control"
+                            id="id_logradouro_proprietario">
                     </div>
                     <div class="form-group col-lg-2">
-                        <label for="numero-proprietario">Número</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                        <label for="num_da_rua_proprietario">Número</label>
+                        <input type="number" name="num_da_rua_proprietario" class="form-control"
+                            id="id_num_da_rua_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">bairro</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                        <label for="bairro_proprietario">bairro</label>
+                        <input type="text" name="bairro_proprietario" class="form-control" id="id_bairro_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Cidade</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                        <label for="cidade_proprietario">Cidade</label>
+                        <input type="text" name="cidade_proprietario" class="form-control" id="id_cidade_proprietario">
                     </div>
                     <div class="form-group col-lg-2">
-                        <label for="numero-proprietario">UF</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                        <label for="uf_proprietario">UF</label>
+                        <input type="text" name="uf_proprietario" class="form-control" id="id_uf_proprietario">
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="numero-proprietario">Complemento</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                        <label for="complemento_proprietario">Complemento</label>
+                        <input type="text" name="complemento_proprietario" class="form-control"
+                            id="id_complemento_proprietario">
                     </div>
                     <div class="form-group col-lg-2">
-                        <label for="numero-proprietario">CEP</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                        <label for="cep_proprietario">CEP</label>
+                        <input type="text" name="cep_proprietario" class="form-control" id="id_cep_proprietario">
                     </div>
                     <div class="form-group col-lg-2">
-                        <label for="numero-proprietario">Telefone</label>
-                        <input type="text" name="numero-proprietario" class="form-control" id="numero-proprietario">
+                        <label for="telefone_proprietario">Telefone</label>
+                        <input type="text" name="telefone_proprietario" class="form-control"
+                            id="id_telefone_proprietario">
 
                     </div>
                 </section>
             </div>
-            <div class="form-item">
-                <div class="form-item-title">
-                    <span class="fas fa-file-signature" aria-hidden="true"></span>
-                    <h4>Termos de Uso</h4>
-                    <hr>
-                </div>
-                <div class="form-subitem pt-2">
-                    <h5>
-                        Solicito acesso ao Sistema Municipal acima selecionado, compromentendo-me a:
-                    </h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quibusdam perspiciatis veniam
-                        optio numquam nemo et deserunt, beatae odio nihil officia, deleniti voluptatum similique non!
-                        Cupiditate hic repudiandae veniam aliquid.</p>
-                </div>
-                <div class="form-subitem">
-                    <div class="form-check">
-                        <input type="checkbox" name="check" class="form-check-input" required="" id="id_check">
-                        <label class="form-check-label" for="id_check">
-                            <strong>
-                                Declaro, <u>nesta data, ter ciência e estar de acordo com os procedimentos acima
-                                    descritos</u>, comprometendo-me a respeitá-los e cumpri-los plena e integralmente.
-                            </strong>
-                        </label>
+            <section id="termos">
+                <div class="form-item">
+                    <div class="form-item-title">
+                        <span class="fas fa-file-signature" aria-hidden="true"></span>
+                        <h4>Termos de Uso</h4>
+                        <hr>
+                    </div>
+                    <div class="form-subitem pt-2">
+                        <h5>
+                            Solicito acesso ao Sistema Municipal acima
+                            selecionado, compromentendo-me a:
+                        </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Quidem quibusdam perspiciatis
+                            veniam
+                            optio numquam nemo et deserunt, beatae odio nihil
+                            officia, deleniti voluptatum similique
+                            non!
+                            Cupiditate hic repudiandae veniam aliquid.</p>
+                    </div>
+                    <div class="form-subitem">
+                        <div class="form-check">
+                            <input type="checkbox" name="check" class="form-check-input" required="" id="id_check">
+                            <label class="form-check-label" for="id_check">
+                                <strong>
+                                    Declaro, <u>nesta data, ter ciência e estar
+                                        de acordo com os procedimentos acima
+                                        descritos</u>, comprometendo-me a
+                                    respeitá-los e cumpri-los plena e
+                                    integralmente.
+                                </strong>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div style="float:right;">
-                <button class="btn btn-success" type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-                <button class="btn btn-success" type="button" id="nextBtn" onclick="nextPrev(1)">Proxímo</button>
-            </div>
-
-
-            <!-- Circles which indicates the steps of the form: -->
-            <div style="text-align:center;margin-top:40px;">
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-            </div>
-
-
+            </section>
             <div class="py-3 text-center">
-                <button type="submit" id="submit" class="btn btn-secondary">Gerar Requerimento</button>
+                <button type="submit" id="submit" class="btn btn-secondary">Gerar
+                    Requerimento</button>
             </div>
         </form>
         <!--    <footer class="footer pt-4 pb-2 mt-3">
@@ -492,9 +538,8 @@
             crossorigin="anonymous"></script>
         <!-- Slim Select -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
-
-
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
         <script src="./js/main.js"></script>
         <script src="./js/validation.js"></script>
 </body>

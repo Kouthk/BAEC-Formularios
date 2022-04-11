@@ -29,8 +29,8 @@
   box-sizing: border-box;
 }
 .type-alter-list {
-  font-family: "Markazi Text", serif;
   font-weight: bold;
+  font-size: 0.825em;
 }
 
 .form-group {
