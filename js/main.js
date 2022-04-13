@@ -10,7 +10,6 @@ fetch("../lista_cnae.json")
       placeholder: "Selecione a atividade principal",
       searchPlaceholder: "Buscar:",
       data: data,
-      
     });
     new SlimSelect({
       select: "#select_CNAEs_secundario_atividadeEconomica",
@@ -47,3 +46,8 @@ $("input[id*='id_cpf_ou_cnpj_proprietario']").inputmask({
   mask: ["999.999.999-99", "99.999.999/9999-99"],
   keepStatic: true,
 });
+
+// LocalStorage
+let formsData = document.getElementById("#form");
+
+console.log(formsData);
