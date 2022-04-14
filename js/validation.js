@@ -53,6 +53,11 @@ function saveLocalStorage() {
   console.log(tipoRequisiçaoDoc);
 
   //Section Identificação:
+  let tipoContribuinte = document.querySelector(
+    'input[name="tipoContribuinte"]:checked'
+  ).value;
+  console.log(tipoContribuinte);
+
   let id_cnpj_cpf_identificacao = document.getElementById(
     "id_cnpj_cpf_identificacao"
   ).value;
@@ -61,26 +66,10 @@ function saveLocalStorage() {
     "id_dataAbertura_identificacao"
   ).value;
   console.log(id_dataAbertura_identificacao);
-  let id_rg_identificacao = document.getElementById(
-    "id_rg_identificacao"
-  ).value;
-  console.log(id_rg_identificacao);
-
-  let id_rjcCartorio_identificacao = document.getElementById(
-    "id_rjcCartorio_identificacao"
-  ).value;
-  console.log(id_rjcCartorio_identificacao);
-
-  let id_dataResgistro_identificacao = document.getElementById(
-    "id_dataResgistro_identificacao"
-  ).value;
-  console.log(id_dataResgistro_identificacao);
-
   let id_nameRazaoSocial_identificacao = document.getElementById(
     "id_nameRazaoSocial_identificacao"
   ).value;
   console.log(id_nameRazaoSocial_identificacao);
-
   let id_nameFantasia_identificacao = document.getElementById(
     "id_nameFantasia_identificacao"
   ).value;
@@ -270,11 +259,9 @@ function saveLocalStorage() {
       tipoRequisiçaoDoc: tipoRequisiçaoDoc,
     },
     identificacao: {
+      tipoContribuinte: tipoContribuinte,
       id_cnpj_cpf_identificacao: id_cnpj_cpf_identificacao,
       id_dataAbertura_identificacao: id_dataAbertura_identificacao,
-      id_rg_identificacao: id_rg_identificacao,
-      id_rjcCartorio_identificacao: id_rjcCartorio_identificacao,
-      id_dataResgistro_identificacao: id_dataResgistro_identificacao,
       id_nameRazaoSocial_identificacao: id_nameRazaoSocial_identificacao,
       id_nameFantasia_identificacao: id_nameFantasia_identificacao,
       id_email_identificacao: id_email_identificacao,

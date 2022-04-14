@@ -23,12 +23,8 @@
     <section class="d-print-none">
         <div class="alert alert-success text-center" role="alert" id="orientation">
             <p class="alert-title">Requerimento gerado com sucesso!</p>
-            <p> Imprima e entregue o documento <b>devidamente assinado</b> para o responsável (
-                <b>receita@email.com</b>).
-            </p>
-            <p>Utilize o <b>número do requerimento</b> para acompanhar o status da solicitação em <br>
-                <a
-                    href="http://www.rondonopolis.mt.gov.br/dti/consultar-requerimento/">http://www.rondonopolis.mt.gov.br/dti/consultar-requerimento/</a>
+            <p> Imprima e entregue o documento <b>devidamente assinado</b> para o responsável
+                (<b>Receita@rondonopolis.mt.gov.br</b>).
             </p>
         </div>
     </section>
@@ -61,34 +57,74 @@
                 <span class="data-label">Tipo de Requisição</span> <span id="tipoDeRequisicao"></span>
             </li>
             <li class="col-4">
+                <span class="data-label">Tipo de Contribuinte</span> <span id="tipoContribuinte"></span>
+            </li>
+            <li class="col-4">
                 <span class="data-label">CPF/CNPJ</span><span id="id_cnpj_cpf_identificacao"></span>
             </li>
             <li class="col-4">
                 <span class="data-label">Data da Abertura</span><span id="id_dataAbertura_identificacao"></span>
             </li>
             <li class="col-4">
-                <span class="data-label">Inscrição Estadual/RG</span><span id="id_rg_identificacao"></span>
+                <span class="data-label">Razão Social</span><span id="id_nameRazaoSocial_identificacao"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">Nome Fantasia</span><span id="id_nomeFantasia_identificacao"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">E-mail</span><span id="id_email_identificacao"></span>
             </li>
             <li class="col-12">
-                <span class="data-label">Registro de Junta Comercial/Cartório</span><span
-                    id="id_rjcCartorio_identificacao"></span>
+                <span class="data-label">Observações</span><span id="id_obsRelevante_identificacao"></span>
             </li>
-            <li class="col-4">
-                <span class="data-label">Data de Registro</span><span id="id_dataResgistro_identificacao"></span>
-            </li>
-            <li class="col-4">
-                <span class="data-label">Nome / Razão Social</span><span id="id_nameRazaoSocial_identificacao"></span>
-            </li>
-            <li class="col-4">
-                <span class="data-label">Data de Registro</span><span id="id_dataResgistro_identificacao"></span>
-            </li>
-
-
-
         </ul>
     </div>
-
-
+    <div class="section-content mb-2">
+        <p class="title">Atividade Econômica</p>
+        <ul class="row data-list list-unstyled">
+            <li class="col-12">
+                <span class="data-label">Ramo de Atividade</span> <span id="select_atividadeEconomica"></span>
+            </li>
+            <li class="col-12">
+                <span class="data-label">Código CNAE e Atividade Principal
+                </span> <span id="select_CNAEs_atividadeEconomica"></span>
+            </li>
+            <li class="col-12">
+                <span class="data-label">Código CNAE e Atividades Secundarias</span><span
+                    id="select_CNAEs_secundario_atividadeEconomica"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="section-content mb-2">
+        <p class="title">Localização das atividades</p>
+        <ul class="row data-list list-unstyled">
+            <li class="col-6">
+                <span class="data-label">Logradouro</span> <span id="id_logradouro_localizacao_das_atividades"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">Número</span>
+                </span> <span id="id_numero_localizacao_das_atividades"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">Bairro</span><span id="id_bairro_localizacao_das_atividades"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">CEP</span><span id="id_cep_localizacao_das_atividades"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">Complemento</span><span id="id_complementar_localizacao_das_atividades"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">Cidade</span><span id="id_cidade_localizacao_das_atividades"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">UF</span><span id="id_uf_localizacao_das_atividades"></span>
+            </li>
+            <li class="col-4">
+                <span class="data-label">Contato</span><span id="id_telefone_localizacao_das_atividades"></span>
+            </li>
+        </ul>
+    </div>
 
     <section class="text-center mb-2 d-print-none">
         <div class="container">

@@ -105,8 +105,7 @@
             </div>
         </section>
         <a href="page_impressao.html">teste</a>
-        <form class="needs-validation" action="" method="post" name="form" id="requisition-form"
-            novalidate>
+        <form class="needs-validation" action="" method="post" name="form" id="requisition-form" novalidate>
             <input type="hidden" name="csrfmiddlewaretoken"
                 value="dbTzxNYfqXrzNd8xEd5kxnfTKKHAWxE31jiz1yF21fjl4Gi4r2Oue5Ugid9WFLR7">
             <div class="form-item pb-4">
@@ -152,12 +151,45 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Fim do Select forms -->
                 <section id="identificacao">
                     <div class="form-item-title">
                         <span class="fas fa-address-card" aria-hidden="true"></span>
                         <h4 class="title-section">IDENTIFICAÇÃO</h4>
                         <hr>
+                    </div>
+                    <div class="card mb-4 col-lg-4">
+                        <!-- Select forms -->
+                        <div class="card-body">
+                            <div class="alert p-0" role="alert">
+                                <span class="fas fa-exclamation-circle mr-1"></span>
+                                <strong> Tipo de Conribuinte: </strong>
+                            </div>
+                            <div class="form-group mb-0 nav-breadcrumb-bg
+                                type-alter-list">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipoContribuinte" 
+                                        id="tipoContribuinte1" value="MEI" required>
+                                    <label class="form-check-label" for="tipoContribuinte1">MEI</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipoContribuinte"
+                                        id="tipoContribuinte2" value="EPP">
+                                    <label class="form-check-label" for="tipoContribuinte2"> EPP</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipoContribuinte"
+                                        id="tipoContribuinte3" value="ME">
+                                    <label class="form-check-label" for="tipoContribuinte3">ME</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipoContribuinte"
+                                        id="tipoContribuinte4" value="OUTROS">
+                                    <label class="form-check-label" for="tipoContribuinte4">OUTROS</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="cnpj_cpf_identificacao">CNPJ/CPF</label>
@@ -170,42 +202,11 @@
                             Forneça uma Informação válida.
                         </div>
                     </div>
-                    <div class="form-group col-lg-6">
-                        <label for="cmc_identificacao">Inscrição Municipal - CMC</label>
-                        <input type="text" name="cmc_identificacao" class="form-control" id="id_cmc_identificacao"
-                            required>
-                        <div class="valid-feedback">
 
-                        </div>
-                    </div>
-                    <div class="form-group col-lg-6">
+                    <div class="form-group col-lg-6 col-md-6">
                         <label for="dataAbertura_identificacao">Data de Abertura</label>
                         <input type="date" name="dataAbertura_identificacao" maxlength="20" class="form-control"
                             id="id_dataAbertura_identificacao">
-                        <div class="valid-feedback">
-                            Parece bom!
-                        </div>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="rg_identificacao">Inscrição Estadual / RG</label>
-                        <input type="text" name="rg_identificacao" class="form-control" id="id_rg_identificacao">
-                        <div class="valid-feedback">
-                            Parece bom!
-                        </div>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="rjcCartorio_identificacao">Registro de Junta
-                            Comercial / Cartório</label>
-                        <input type="text" name="rjcCartorio_identificacao" class="form-control"
-                            id="id_rjcCartorio_identificacao">
-                        <div class="valid-feedback">
-                            Parece bom!
-                        </div>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="dataResgistro_identificacao">Data Registro</label>
-                        <input type="date" name="dataResgistro_identificacao" class="form-control"
-                            id="id_dataResgistro_identificacao">
                         <div class="valid-feedback">
                             Parece bom!
                         </div>
