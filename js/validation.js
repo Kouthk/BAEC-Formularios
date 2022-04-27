@@ -15,6 +15,7 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+          $('input:invalid').filter(":first").focus()
           console.log("false");
         }
 
@@ -32,6 +33,9 @@
   });
   console.log("ola");
 })();
+
+
+
 /* 
 function validar() {
   let cnpj_ou_cpf = form.cnpj_cpf_identificacao;
@@ -148,43 +152,43 @@ function saveLocalStorage() {
     'input[name="endrecoIgual_localizacao_das_atividades"]:checked'
   ).value;
   console.log(endrecoIgual_localizacao_das_atividades);
-  if (endrecoIgual_localizacao_das_atividades == "0") {
-    // Section endereço de correspondencia:
-    let id_Logradouro_endereco_correspondencia = document.getElementById(
-      "id_Logradouro_endereco_correspondencia"
-    ).value;
-    console.log(id_Logradouro_endereco_correspondencia);
 
-    let id_numero_endereco_correspondencia = document.getElementById(
-      "id_numero_endereco_correspondencia"
-    ).value;
-    console.log(id_numero_endereco_correspondencia);
+  // Section endereço de correspondencia:
+  let id_Logradouro_endereco_correspondencia = document.getElementById(
+    "id_Logradouro_endereco_correspondencia"
+  ).value;
+  console.log(id_Logradouro_endereco_correspondencia);
 
-    let id_bairro_endereco_correspondencia = document.getElementById(
-      "id_bairro_endereco_correspondencia"
-    ).value;
-    console.log(id_bairro_endereco_correspondencia);
+  let id_numero_endereco_correspondencia = document.getElementById(
+    "id_numero_endereco_correspondencia"
+  ).value;
+  console.log(id_numero_endereco_correspondencia);
 
-    let id_complemento_endereco_correspondencia = document.getElementById(
-      "id_complemento_endereco_correspondencia"
-    ).value;
-    console.log(id_complemento_endereco_correspondencia);
+  let id_bairro_endereco_correspondencia = document.getElementById(
+    "id_bairro_endereco_correspondencia"
+  ).value;
+  console.log(id_bairro_endereco_correspondencia);
 
-    let id_cep_endereco_correspondencia = document.getElementById(
-      "id_cep_endereco_correspondencia"
-    ).value;
-    console.log(id_cep_endereco_correspondencia);
+  let id_complemento_endereco_correspondencia = document.getElementById(
+    "id_complemento_endereco_correspondencia"
+  ).value;
+  console.log(id_complemento_endereco_correspondencia);
 
-    let id_cidade_endereco_correspondencia = document.getElementById(
-      "id_cidade_endereco_correspondencia"
-    ).value;
-    console.log(id_cidade_endereco_correspondencia);
+  let id_cep_endereco_correspondencia = document.getElementById(
+    "id_cep_endereco_correspondencia"
+  ).value;
+  console.log(id_cep_endereco_correspondencia);
 
-    let id_uf_endereco_correspondencia = document.getElementById(
-      "id_uf_endereco_correspondencia"
-    ).value;
-    console.log(id_uf_endereco_correspondencia);
-  }
+  let id_cidade_endereco_correspondencia = document.getElementById(
+    "id_cidade_endereco_correspondencia"
+  ).value;
+  console.log(id_cidade_endereco_correspondencia);
+
+  let id_uf_endereco_correspondencia = document.getElementById(
+    "id_uf_endereco_correspondencia"
+  ).value;
+  console.log(id_uf_endereco_correspondencia);
+
   //Section proprietário:
   let id_nomeRazaoSocial_proprietario = document.getElementById(
     "id_nomeRazaoSocial_proprietario"
@@ -290,6 +294,17 @@ function saveLocalStorage() {
       id_uf_localizacao_das_atividades: id_uf_localizacao_das_atividades,
       endrecoIgual_localizacao_das_atividades:
         endrecoIgual_localizacao_das_atividades,
+    },
+    endrecoCorrespondencia: {
+      id_Logradouro_endereco_correspondencia:
+      id_Logradouro_endereco_correspondencia,
+      id_numero_endereco_correspondencia: id_numero_endereco_correspondencia,
+      id_bairro_endereco_correspondencia: id_bairro_endereco_correspondencia,
+      id_complemento_endereco_correspondencia:
+        id_complemento_endereco_correspondencia,
+      id_cep_endereco_correspondencia: id_cep_endereco_correspondencia,
+      id_cidade_endereco_correspondencia: id_cidade_endereco_correspondencia,
+      id_uf_endereco_correspondencia: id_uf_endereco_correspondencia,
     },
     proprietario: {
       id_nomeRazaoSocial_proprietario: id_nomeRazaoSocial_proprietario,
