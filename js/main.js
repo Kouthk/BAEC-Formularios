@@ -10,6 +10,7 @@ fetch("../lista_cnae.json")
       placeholder: "Selecione a atividade principal",
       searchPlaceholder: "Buscar:",
       data: data,
+      limit: 1,
     });
     new SlimSelect({
       select: "#select_CNAEs_secundario_atividadeEconomica",
@@ -142,10 +143,10 @@ document
     $.ajax({
       type: "GET",
       dataType: "jsonp",
-      url:  `https://www.receitaws.com.br/v1/cnpj/${cnpj}`,
+      url: `https://www.receitaws.com.br/v1/cnpj/${cnpj}`,
       success: function (data) {
         console.log(data);
-        
+
         document.getElementById("id_nameFantasia_identificacao").value =
           data.fantasia;
         document.getElementById("id_nameRazaoSocial_identificacao").value =
@@ -154,8 +155,25 @@ document
           data.abertura;
         document.getElementById("id_email_identificacao").value = data.email;
         //Localização das atividades
-        document.getElementById("id_cep_localizacao_das_atividades").value = data.cep;
-
+        document.getElementById("id_cep_localizacao_das_atividades").value =
+          data.cep.replace(/[^\d]+/g, "");
+        document.getElementById(
+          "id_logradouro_localizacao_das_atividades"
+        ).value = data.logradouro;
+        document.getElementById("id_numero_localizacao_das_atividades").value =
+          data.numero;
+        document.getElementById(
+          "id_complementar_localizacao_das_atividades"
+        ).value = data.complemento;
+        document.getElementById("id_bairro_localizacao_das_atividades").value =
+          data.bairro;
+        document.getElementById("id_cidade_localizacao_das_atividades").value =
+          data.municipio;
+        document.getElementById("id_uf_localizacao_das_atividades").value =
+          data.uf;
+        document.getElementById(
+          "id_telefone_localizacao_das_atividades"
+        ).value = data.telefone;
       },
     });
   });

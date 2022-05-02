@@ -11,6 +11,9 @@
   <!-- Bootstrap 5.0 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/page.css">
@@ -214,9 +217,11 @@
             <hr>
           </div>
           <div class="form-group">
-            <label for="select_atividadeEconomica">Selecione a Atividade Economica</label>
-            <select id='select_atividadeEconomica' class="form-select" aria-label="select example" required>
-              <option disabled selected>Selecione a Atividade Economica</option>
+            <label for="select_atividadeEconomica">Selecione a Atividade Economica <span
+                class="text-danger">*</span></label>
+            <select id='select_atividadeEconomica' class="form-select" data-width="auto"
+              aria-label="Selecione sua atividade economica"  required>
+              <option selected disabled>Selecione uma opção</option>
               <option value="19-Indústria">19 - Indústria</option>
               <option value="27-Comércio">27 - Comércio</option>
               <option value="35-Serviços">35 - Serviços</option>
@@ -226,13 +231,17 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="select_CNAEs_atividadeEconomica">Selecione o CNAEs Principal</label>
-            <select id="select_CNAEs_atividadeEconomica" aria-label="Selecione o CNAE principal" required></select>
+            <label for="select_CNAEs_atividadeEconomica">Selecione o CNAE Principal (Apenas 1) <span
+                class="text-danger">*</span></label>
+            <select id="select_CNAEs_atividadeEconomica" aria-label="Selecione o CNAE principal" class="selectpicker"
+              title="Selecione uma opção" data-live-search="true"  multiple required></select> 
           </div>
           <div class="form-group">
-            <label for="select_CNAEs_secundario_atividadeEconomica">Selecione os CNAEs Secundarios</label>
-            <select id="select_CNAEs_secundario_atividadeEconomica" multiple aria-label="Selecione os CNAE's secundario"
-              required></select>
+            <label for="select_CNAEs_secundario_atividadeEconomica">Selecione os CNAEs Secundarios<span
+                class="text-danger">*</span></label>
+            <select id="select_CNAEs_secundario_atividadeEconomica" class="selectpicker show-tick" multiple
+              aria-label="Selecione os CNAE's secundario" data-live-search="true" title="Selecione as opções" required>
+            </select>
           </div>
         </section>
         <section id="localizacao_das_atividades">
@@ -258,14 +267,14 @@
                 id="id_numero_localizacao_das_atividades" required>
             </div>
             <div class="form-group col-lg-6">
-              <label for="bairro_localizacao_das_atividades">bairro</label>
-              <input type="text" name="bairro_localizacao_das_atividades" class="form-control"
-                id="id_bairro_localizacao_das_atividades" required>
-            </div>
-            <div class="form-group col-lg-6">
               <label for="complementar_localizacao_das_atividades">Complemento</label>
               <input type="text" name="complementar_localizacao_das_atividades" class="form-control"
                 id="id_complementar_localizacao_das_atividades">
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="bairro_localizacao_das_atividades">bairro</label>
+              <input type="text" name="bairro_localizacao_das_atividades" class="form-control"
+                id="id_bairro_localizacao_das_atividades" required>
             </div>
             <div class="form-group col-lg-6">
               <label for="cidade_localizacao_das_atividades">Cidade</label>
@@ -282,7 +291,7 @@
               <input type="text" name="telefone_localizacao_das_atividades" class="form-control"
                 id="id_telefone_localizacao_das_atividades" data-mask="(00) 00000-0000" required>
             </div>
-            <div class="form-group">
+            <div class="form-group d-none">
               <label for="endrecoIgual_localizacao_das_atividades">Usar esse endereço como Endereço de
                 correspondencia?</label>
               <div id="endereco_igual" class="col-lg-2">
@@ -347,7 +356,7 @@
         <section id="proprietario">
           <div class="form-item-title">
             <span class="fas fa-user-tie" aria-hidden="true"></span>
-            <h4 class="title-section">PROPRIETÁRIO</h4>
+            <h4 class="title-section">SÓCIO/RESPONSÁVEL/PROCURADOR</h4>
             <hr>
           </div>
           <div class="form-group col-lg-6">
@@ -362,7 +371,7 @@
           <div class="form-group col-lg-6">
             <label for="select_estado_civil_proprietario">Estado Civil</label>
             <select id='select_estado_civil_proprietario' class="form-select" aria-label="select example" required>
-              <option selected>Selecione o Estado Civil</option>
+              <option selected disabled>Selecione o Estado Civil</option>
               <option value="Solteiro">Solteiro</option>
               <option value="Casado">Casado</option>
               <option value="Separado">Separado</option>
@@ -381,9 +390,14 @@
               required>
           </div>
           <div class="form-group  col-lg-3 col-md-6">
-            <label for="telefone_proprietario">Telefone</label>
+            <label for="telefone_proprietario">Telefone Comercial</label>
             <input type="text" name="telefone_proprietario" class="form-control" id="id_telefone_proprietario"
-              data-mask="(00) 00000-0000" required>
+              data-mask="(00) 0000-0000" required>
+          </div>
+          <div class="form-group  col-lg-3 col-md-6">
+            <label for="telefone_celular_proprietario">Telefone Celular</label>
+            <input type="text" name="telefone_celular_proprietario" class="form-control"
+              id="id_telefone_celular_proprietario" data-mask="(00) 00000-0000" required>
           </div>
           <div class="form-group col-lg-6">
             <label for="email_proprietario">E-mail</label>
@@ -460,17 +474,18 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
     <!-- Slim Select -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    < <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js">
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
 
 
 
-    <!-- https://igorescobar.github.io/jQuery-Mask-Plugin/ -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+      <!-- https://igorescobar.github.io/jQuery-Mask-Plugin/ -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
-    <script src="./js/main.js"></script>
-    <script src="./js/validation.js"></script>
+      <script src="./js/main.js"></script>
+      <script src="./js/validation.js"></script>
 </body>
 
 </html>

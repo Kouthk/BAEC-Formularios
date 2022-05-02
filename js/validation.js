@@ -15,7 +15,7 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-          $('input:invalid').filter(":first").focus()
+          $("input:invalid").filter(":first").focus();
           console.log("false");
         }
 
@@ -33,8 +33,6 @@
   });
   console.log("ola");
 })();
-
-
 
 /* 
 function validar() {
@@ -102,9 +100,10 @@ function saveLocalStorage() {
 
   let select_CNAEs_secundario_atividadeEconomica = document.getElementById(
     "select_CNAEs_secundario_atividadeEconomica"
-  ).value;
-  console.log(select_CNAEs_secundario_atividadeEconomica);
-
+  );
+  let value_select_CNAEs_secundario_atividadeEconomica = [
+    ...select_CNAEs_secundario_atividadeEconomica.selectedOptions,
+  ].map((option) => option.value);
   // Section Endereço localização das atividades:
   let id_logradouro_localizacao_das_atividades = document.getElementById(
     "id_logradouro_localizacao_das_atividades"
@@ -246,17 +245,18 @@ function saveLocalStorage() {
   let id_complemento_proprietario = document.getElementById(
     "id_complemento_proprietario"
   ).value;
-  console.log(id_complemento_proprietario);
 
   let id_cep_proprietario = document.getElementById(
     "id_cep_proprietario"
   ).value;
-  console.log(id_cep_proprietario);
 
   let id_telefone_proprietario = document.getElementById(
     "id_telefone_proprietario"
   ).value;
-  console.log(id_telefone_proprietario);
+
+  let id_telefone_celular_proprietario = document.getElementById(
+    "id_telefone_celular_proprietario"
+  ).value;
 
   var dataJson = {
     tipoDeRequisicao: {
@@ -275,7 +275,7 @@ function saveLocalStorage() {
       select_atividadeEconomica: select_atividadeEconomica,
       select_CNAEs_atividadeEconomica: select_CNAEs_atividadeEconomica,
       select_CNAEs_secundario_atividadeEconomica:
-        select_CNAEs_secundario_atividadeEconomica,
+        value_select_CNAEs_secundario_atividadeEconomica,
     },
     localizacao_das_atividades: {
       id_logradouro_localizacao_das_atividades:
@@ -297,7 +297,7 @@ function saveLocalStorage() {
     },
     endrecoCorrespondencia: {
       id_Logradouro_endereco_correspondencia:
-      id_Logradouro_endereco_correspondencia,
+        id_Logradouro_endereco_correspondencia,
       id_numero_endereco_correspondencia: id_numero_endereco_correspondencia,
       id_bairro_endereco_correspondencia: id_bairro_endereco_correspondencia,
       id_complemento_endereco_correspondencia:
@@ -321,6 +321,7 @@ function saveLocalStorage() {
       id_complemento_proprietario: id_complemento_proprietario,
       id_cep_proprietario: id_cep_proprietario,
       id_telefone_proprietario: id_telefone_proprietario,
+      id_telefone_celular_proprietario: id_telefone_celular_proprietario,
     },
   };
 

@@ -93,3 +93,7 @@ input.invalid {
 .step.finish {
   background-color: #04aa6d;
 }
+
+.filter-option-inner-inner {
+  color: #000 !important;
+}

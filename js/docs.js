@@ -51,14 +51,14 @@ document.getElementById("endrecoIgual_localizacao_das_atividades").innerHTML =
   data.localizacao_das_atividades.endrecoIgual_localizacao_das_atividades;
 
 //Endereço de Correspondencia e Cobrança
-if (
+/* if (
   document.getElementById("endrecoIgual_localizacao_das_atividades") == "Sim"
 ) {
   document.getElementById("end_correspondencia").classList.add("d-none");
 } else {
   document.getElementById("end_correspondencia").classList.remove("d-none");
 }
-
+ */
 document.getElementById("id_Logradouro_endereco_correspondencia").innerHTML =
   data.endrecoCorrespondencia.id_Logradouro_endereco_correspondencia;
 document.getElementById("id_numero_endereco_correspondencia").innerHTML =
