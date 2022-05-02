@@ -582,3 +582,6 @@ input[type=file] { cursor: pointer; }
 }
 
 
+.ss-disabled{
+  color: #000000 !important;
+}
