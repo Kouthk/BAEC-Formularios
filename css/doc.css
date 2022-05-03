@@ -270,4 +270,7 @@ ul.footer-list li a:hover {
     margin-bottom: 0;
   }
   
+  hr {
+    border-top: solid 1px rgb(95, 94, 94) !important;
+  }
 }

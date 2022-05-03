@@ -148,8 +148,6 @@ document
         dataType: "jsonp",
         url: `https://www.receitaws.com.br/v1/cnpj/${cnpj}`,
         success: function (data) {
-          console.log(data);
-
           document.getElementById("id_nameFantasia_identificacao").value =
             data.fantasia;
           document.getElementById("id_nameRazaoSocial_identificacao").value =
