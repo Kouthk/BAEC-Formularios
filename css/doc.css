@@ -274,3 +274,7 @@ ul.footer-list li a:hover {
     border-top: solid 1px rgb(95, 94, 94) !important;
   }
 }
+
+.text-justify{
+  text-align: justify;
+}

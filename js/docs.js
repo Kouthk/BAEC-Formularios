@@ -58,7 +58,7 @@ document.getElementById("endrecoIgual_localizacao_das_atividades").innerHTML =
 } else {
   document.getElementById("end_correspondencia").classList.remove("d-none");
 }
- *//* 
+ */ /* 
 document.getElementById("id_Logradouro_endereco_correspondencia").innerHTML =
   data.endrecoCorrespondencia.id_Logradouro_endereco_correspondencia;
 document.getElementById("id_numero_endereco_correspondencia").innerHTML =
@@ -103,6 +103,8 @@ document.getElementById("id_email_proprietario").innerHTML =
   data.proprietario.id_email_proprietario;
 document.getElementById("id_telefone_proprietario").innerHTML =
   data.proprietario.id_telefone_proprietario;
+document.getElementById("id_telefone_celular_proprietario").innerHTML =
+  data.proprietario.id_telefone_celular_proprietario;
 
 document
   .getElementById("id_obsRelevante_identificacao")
