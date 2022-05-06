@@ -278,3 +278,7 @@ ul.footer-list li a:hover {
 .text-justify{
   text-align: justify;
 }
+
+.page-breaker {
+  page-break-after: always;
+}

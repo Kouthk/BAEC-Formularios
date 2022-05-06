@@ -1,0 +1,251 @@
+[
+	{
+		"text": "101-5 - Órgão Público do Poder Executivo Federal"
+	},
+	{
+		"text": "102-3 - Órgão Público do Poder Executivo Estadual ou do Distrito Federal"
+	},
+	{
+		"text": "103-1 - Órgão Público do Poder Executivo Municipal"
+	},
+	{
+		"text": "104-0 - Órgão Público do Poder Legislativo Federal"
+	},
+	{
+		"text": "105-8 - Órgão Público do Poder Legislativo Estadual ou do Distrito Federal"
+	},
+	{
+		"text": "106-6 - Órgão Público do Poder Legislativo Municipal"
+	},
+	{
+		"text": "107-4 - Órgão Público do Poder Judiciário Federal"
+	},
+	{
+		"text": "108-2 - Órgão Público do Poder Judiciário Estadual"
+	},
+	{
+		"text": "110-4 - Autarquia Federal"
+	},
+	{
+		"text": "111-2 - Autarquia Estadual ou do Distrito Federal"
+	},
+	{
+		"text": "112-0 - Autarquia Municipal"
+	},
+	{
+		"text": "113-9 - Fundação Pública de Direito Público Federal"
+	},
+	{
+		"text": "114-7 - Fundação Pública de Direito Público Estadual ou do Distrito Federal"
+	},
+	{
+		"text": "115-5 - Fundação Pública de Direito Público Municipal"
+	},
+	{
+		"text": "116-3 - Órgão Público Autônomo Federal"
+	},
+	{
+		"text": "117-1 - Órgão Público Autônomo Estadual ou do Distrito Federal"
+	},
+	{
+		"text": "118-0 - Órgão Público Autônomo Municipal"
+	},
+	{
+		"text": "119-8 - Comissão Polinacional"
+	},
+	{
+		"text": "120-1 - Fundo Público"
+	},
+	{
+		"text": "121-0 - Consórcio Público de Direito Público (Associação Pública)"
+	},
+	{
+		"text": "122-8 - Consórcio Público de Direito Privado"
+	},
+	{
+		"text": "123-6 - Estado ou Distrito Federal"
+	},
+	{
+		"text": "124-4 - Município"
+	},
+	{
+		"text": "125-2 - Fundação Pública de Direito Privado Federal"
+	},
+	{
+		"text": "126-0 - Fundação Pública de Direito Privado Estadual ou do Distrito Federal"
+	},
+	{
+		"text": "127-9 - Fundação Pública de Direito Privado Municipal"
+	},
+	{
+		"text": "201-1 - Empresa Pública"
+	},
+	{
+		"text": "203-8 - Sociedade de Economia Mista"
+	},
+	{
+		"text": "204-6 - Sociedade Anônima Aberta"
+	},
+	{
+		"text": "205-4 - Sociedade Anônima Fechada"
+	},
+	{
+		"text": "206-2 - Sociedade Empresária Limitada"
+	},
+	{
+		"text": "207-0 - Sociedade Empresária em Nome Coletivo"
+	},
+	{
+		"text": "208-9 - Sociedade Empresária em Comandita Simples"
+	},
+	{
+		"text": "209-7 - Sociedade Empresária em Comandita por Ações"
+	},
+	{
+		"text": "212-7 - Sociedade em Conta de Participação"
+	},
+	{
+		"text": "213-5 - Empresário (Individual)"
+	},
+	{
+		"text": "214-3 - Cooperativa"
+	},
+	{
+		"text": "215-1 - Consórcio de Sociedades"
+	},
+	{
+		"text": "216-0 - Grupo de Sociedades"
+	},
+	{
+		"text": "217-8 - Estabelecimento, no Brasil, de Sociedade Estrangeira"
+	},
+	{
+		"text": "219-4 - Estabelecimento, no Brasil, de Empresa Binacional Argentino-Brasileira"
+	},
+	{
+		"text": "221-6 - Empresa Domiciliada no Exterior"
+	},
+	{
+		"text": "222-4 - Clube/Fundo de Investimento"
+	},
+	{
+		"text": "223-2 - Sociedade Simples Pura"
+	},
+	{
+		"text": "224-0 - Sociedade Simples Limitada"
+	},
+	{
+		"text": "225-9 - Sociedade Simples em Nome Coletivo"
+	},
+	{
+		"text": "226-7 - Sociedade Simples em Comandita Simples "
+	},
+	{
+		"text": "227-5 - Empresa Binacional"
+	},
+	{
+		"text": "228-3 - Consórcio de Empregadores"
+	},
+	{
+		"text": "229-1 - Consórcio Simples"
+	},
+	{
+		"text": "230-5 - Empresa Individual de Responsabilidade Limitada (de Natureza Empresária)"
+	},
+	{
+		"text": "231-3 - Empresa Individual de Responsabilidade Limitada (de Natureza Simples)"
+	},
+	{
+		"text": "232-1 - Sociedade Unipessoal de Advogados"
+	},
+	{
+		"text": "233-0 - Cooperativas de Consumo"
+	},
+	{
+		"text": "303-4 - Serviço Notarial e Registral (Cartório)"
+	},
+	{
+		"text": "306-9 - Fundação Privada"
+	},
+	{
+		"text": "307-7 - Serviço Social Autônomo"
+	},
+	{
+		"text": "308-5 - Condomínio Edilício"
+	},
+	{
+		"text": "310-7 - Comissão de Conciliação Prévia"
+	},
+	{
+		"text": "311-5 - Entidade de Mediação e Arbitragem"
+	},
+	{
+		"text": "313-1 - Entidade Sindical"
+	},
+	{
+		"text": "320-4 - Estabelecimento, no Brasil, de Fundação ou Associação Estrangeiras"
+	},
+	{
+		"text": "321-2 - Fundação ou Associação Domiciliada no Exterior"
+	},
+	{
+		"text": "322-0 - Organização Religiosa"
+	},
+	{
+		"text": "323-9 - Comunidade Indígena"
+	},
+	{
+		"text": "324-7 - Fundo Privado"
+	},
+	{
+		"text": "325-5 - Órgão de Direção Nacional de Partido Político"
+	},
+	{
+		"text": "326-3 - Órgão de Direção Regional de Partido Político"
+	},
+	{
+		"text": "327-1 - Órgão de Direção Local de Partido Político"
+	},
+	{
+		"text": "328-0 - Comitê Financeiro de Partido Político"
+	},
+	{
+		"text": "329-8 - Frente Plebiscitária ou Referendária"
+	},
+	{
+		"text": "330-1 - Organização Social (OS)"
+	},
+	{
+		"text": "331-0 - Demais Condomínios"
+	},
+	{
+		"text": "399-9 - Associação Privada"
+	},
+	{
+		"text": "401-4 - Empresa Individual Imobiliária"
+	},
+	{
+		"text": "402-2 - Segurado Especial"
+	},
+	{
+		"text": "408-1 - Contribuinte individual"
+	},
+	{
+		"text": "409-0 - Candidato a Cargo Político Eletivo"
+	},
+	{
+		"text": "411-1 - Leiloeiro"
+	},
+	{
+		"text": "412-0 - Produtor Rural (Pessoa Física)"
+	},
+	{
+		"text": "501-0 - Organização Internacional"
+	},
+	{
+		"text": "502-9 - Representação Diplomática Estrangeira"
+	},
+	{
+		"text": "503-7 - Outras Instituições Extraterritoriais "
+	}
+]

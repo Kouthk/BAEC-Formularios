@@ -1,3 +1,41 @@
+/* let data = fetch("../lista_cnae.json")
+  .then((response) => response.json())
+  .then((data) => {
+    return data;
+  });
+ */
+
+let select0 = new SlimSelect({
+  select: "#select_atividadeEconomica",
+  placeholder: "Selecione a atividade principal",
+  searchPlaceholder: "Buscar:",
+  limit: 1,
+});
+
+fetch("../natureza_juridica.json")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    // Work with JSON data here
+    select0.setData(data);
+  })
+  .catch((err) => {
+    // Do something for an error here
+  });
+
+let select1 = new SlimSelect({
+  select: "#select_CNAEs_atividadeEconomica",
+  placeholder: "Selecione a atividade principal",
+  searchPlaceholder: "Buscar:",
+  limit: 1,
+});
+let select2 = new SlimSelect({
+  select: "#select_CNAEs_secundario_atividadeEconomica",
+  placeholder: "Selecione as opções validas",
+  searchPlaceholder: "Buscar:",
+});
+
 // Replace ./data.json with your JSON feed
 fetch("../lista_cnae.json")
   .then((response) => {
@@ -5,19 +43,8 @@ fetch("../lista_cnae.json")
   })
   .then((data) => {
     // Work with JSON data here
-    var select1 = new SlimSelect({
-      select: "#select_CNAEs_atividadeEconomica",
-      placeholder: "Selecione a atividade principal",
-      searchPlaceholder: "Buscar:",
-      data: data,
-      limit: 1,
-    });
-    new SlimSelect({
-      select: "#select_CNAEs_secundario_atividadeEconomica",
-      placeholder: "Selecione as opções validas",
-      searchPlaceholder: "Buscar:",
-      data: data,
-    });
+    select1.setData(data);
+    select2.setData(data);
   })
   .catch((err) => {
     // Do something for an error here
@@ -43,7 +70,7 @@ $("input[id*='id_cnpj_cpf_identificacao']").inputmask({
   mask: ["99.999.999/9999-99"],
 });
 $("input[id*='id_cpf_ou_cnpj_proprietario']").inputmask({
-  mask: ["999.999.999-99", "99.999.999/9999-99"],
+  mask: ["999.999.999-99"],
 });
 
 /* let dataLog = fetch("https://viacep.com.br/ws/78700300/json/").then(
@@ -139,7 +166,11 @@ document
   .addEventListener("focusout", function () {
     let cnpj = document.getElementById("id_cnpj_cpf_identificacao").value;
     if (!is_cnpj(cnpj)) {
-      alert(" O CNPJ:"+ cnpj+" é inválido. Limparemos o campo para que vocÊ digite novamente.");
+      alert(
+        " O CNPJ:" +
+          cnpj +
+          " é inválido. Limparemos o campo para que vocÊ digite novamente."
+      );
       document.getElementById("id_cnpj_cpf_identificacao").value = "";
     } else {
       cnpj = cnpj.replace(/[^\d]+/g, "");
@@ -178,59 +209,109 @@ document
           document.getElementById(
             "id_telefone_localizacao_das_atividades"
           ).value = data.telefone;
+
+          // Select do cnae
+          select0.set(data.natureza_juridica)
+
+          select1.set([
+            data.atividade_principal[0].code.replace(/[^\d]+/g, "") +
+              " - " +
+              data.atividade_principal[0].text,
+          ]);
+
+          let arrayComCnaes = [];
+          for (let i = 0; i < data.atividades_secundarias.length; i++) {
+            arrayComCnaes.push(
+              data.atividades_secundarias[i].code.replace(/[^\d]+/g, "") +
+                " - " +
+                data.atividades_secundarias[i].text
+            );
+          }
+          select2.set(arrayComCnaes);
         },
       });
     }
   });
 
 function is_cnpj(cnpj) {
-  cnpj = cnpj.replace(/[^\d]+/g,'');
+  cnpj = cnpj.replace(/[^\d]+/g, "");
 
-  if(cnpj == '') return false;
+  if (cnpj == "") return false;
 
-  if (cnpj.length != 14)
-      return false;
+  if (cnpj.length != 14) return false;
 
   // LINHA 10 - Elimina CNPJs invalidos conhecidos
-  if (cnpj == "00000000000000" || 
-      cnpj == "11111111111111" || 
-      cnpj == "22222222222222" || 
-      cnpj == "33333333333333" || 
-      cnpj == "44444444444444" || 
-      cnpj == "55555555555555" || 
-      cnpj == "66666666666666" || 
-      cnpj == "77777777777777" || 
-      cnpj == "88888888888888" || 
-      cnpj == "99999999999999")
-      return false; // LINHA 21
+  if (
+    cnpj == "00000000000000" ||
+    cnpj == "11111111111111" ||
+    cnpj == "22222222222222" ||
+    cnpj == "33333333333333" ||
+    cnpj == "44444444444444" ||
+    cnpj == "55555555555555" ||
+    cnpj == "66666666666666" ||
+    cnpj == "77777777777777" ||
+    cnpj == "88888888888888" ||
+    cnpj == "99999999999999"
+  )
+    return false; // LINHA 21
 
   // Valida DVs LINHA 23 -
-  tamanho = cnpj.length - 2
-  numeros = cnpj.substring(0,tamanho);
+  tamanho = cnpj.length - 2;
+  numeros = cnpj.substring(0, tamanho);
   digitos = cnpj.substring(tamanho);
   soma = 0;
   pos = tamanho - 7;
   for (i = tamanho; i >= 1; i--) {
     soma += numeros.charAt(tamanho - i) * pos--;
-    if (pos < 2)
-          pos = 9;
+    if (pos < 2) pos = 9;
   }
-  resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-  if (resultado != digitos.charAt(0))
-      return false;
+  resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+  if (resultado != digitos.charAt(0)) return false;
 
   tamanho = tamanho + 1;
-  numeros = cnpj.substring(0,tamanho);
+  numeros = cnpj.substring(0, tamanho);
   soma = 0;
   pos = tamanho - 7;
   for (i = tamanho; i >= 1; i--) {
     soma += numeros.charAt(tamanho - i) * pos--;
-    if (pos < 2)
-          pos = 9;
+    if (pos < 2) pos = 9;
   }
-  resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-  if (resultado != digitos.charAt(1))
-        return false; // LINHA 49
+  resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+  if (resultado != digitos.charAt(1)) return false; // LINHA 49
 
   return true; // LINHA 51
+}
+
+document
+  .getElementById("id_cpf_ou_cnpj_proprietario")
+  .addEventListener("focusout", function () {
+    let cpf = document.getElementById("id_cpf_ou_cnpj_proprietario").value;
+    if (!isCPF(cpf)) {
+      alert(
+        " O CPF:" +
+          cpf +
+          " é inválido. Limparemos o campo para que você digite novamente."
+      );
+      document.getElementById("id_cpf_ou_cnpj_proprietario").value = "";
+    }
+  });
+
+function isCPF(cpf) {
+  cpf = cpf.replace(/\D/g, "");
+  if (cpf.toString().length != 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+  var result = true;
+  [9, 10].forEach(function (j) {
+    var soma = 0,
+      r;
+    cpf
+      .split(/(?=)/)
+      .splice(0, j)
+      .forEach(function (e, i) {
+        soma += parseInt(e) * (j + 2 - (i + 1));
+      });
+    r = soma % 11;
+    r = r < 2 ? 0 : 11 - r;
+    if (r != cpf.substring(j, j + 1)) result = false;
+  });
+  return result;
 }
