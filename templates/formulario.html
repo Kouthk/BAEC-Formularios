@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario - Secretaria de Receita</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../static/app/img/favicon.png">
+  <!-- Bootstrap 5.0 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+
+  <link rel="stylesheet" href="../static/app/css/style.css">
+  <link rel="stylesheet" href="../static/app/css/base.css">
+  <link rel="stylesheet" href="../static/app/css/page.css">
+  <link rel="stylesheet" href="../static/app/css/main.css">
+  <!--FontAwensome 5.14 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <!-- Slim Select  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet">
+  </link>
+</head>
+
+<body class="d-flex flex-column">
+  <section class="topbar">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <a class="topbar-brand mr-1" href="http://www.rondonopolis.mt.gov.br/">
+          <img src="./img/brasao.png" title="Prefeitura Municipal de
+                        Rondonópolis" loading="lazy" class="img-fluid mr-lg-1">
+          <span class="d-none d-lg-inline">Prefeitura de </span>Rondonópolis </a>
+        <div class="accessibility ml-auto">
+          <ul class="list-inline accessibility-item sr-only">
+            <li class="list-inline-item">
+              <a href="#forms" accesskey="1">Conteúdo [1]</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#menu" accesskey="2">Menu Principal [2]</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#busca" accesskey="3">Busca [3]</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#rodape" accesskey="4">Rodapé [4]</a>
+            </li>
+          </ul>
+          <a href="https://www.vlibras.gov.br/" class="accessibility-item d-none d-lg-inline-block">
+            <span class="fas fa-sign-language icon"></span> VLibras </a>
+          <a href="#" class="btn-link accessibility-item" aria-label="Alto Contraste" onclick="window.toggleContrast()"
+            onkeydown="window.toggleContrast()">
+            <span class="fas fa-adjust icon"></span>
+            <span class="d-none d-lg-inline">Alto Contraste</span>
+          </a>
+          <a href="#" class="accessibility-item mr-0" aria-label="Acessibilidade">
+            <span class="fas fa-universal-access icon"></span>
+            <span class="d-none d-lg-inline">Acessibilidade</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cabeçalho -->
+  <header class="header overlay-header" style="background-image:
+        url(../static/app/img/background.jpg);">
+    <div class="container text-center">
+      <h1>Secretaria de Receita</h1>
+      <h2>Informações e Serviços</h2>
+    </div>
+  </header>
+  <!-- Breadcrumb -->
+  <div class="container">
+    <nav class="nav-breadcrumb nav-breadcrumb-bg mt-3" aria-label="breadcrumb">
+      <label for="breadcrumb-list" class="breadcrumb-label">Você está em:</label>
+      <ol class="breadcrumb" id="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="/dti/">Início</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/dti/requerimentos/">Requerimentos</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page"> Requerimento de Cadastro de Empresa </li>
+      </ol>
+    </nav>
+    <section class="section-primary">
+      <div class="section-head py-4 d-flex justify-content-center">
+        <div class="section-title title-decorated">
+          <h3> Requerimento de Cadastro de Empresa </h3>
+        </div>
+      </div>
+    </section>
+    <form id="forms" class="needs-validation" name="form" id="requisition-form" novalidate>
+      <input type="hidden" name="csrfmiddlewaretoken"
+        value="dbTzxNYfqXrzNd8xEd5kxnfTKKHAWxE31jiz1yF21fjl4Gi4r2Oue5Ugid9WFLR7">
+      <div class="form-item pb-4">
+        <div class="card mb-4">
+          <!-- Select forms -->
+          <div class="card-body">
+            <div class="alert p-0" role="alert">
+              <span class="fas fa-exclamation-circle mr-1"></span>
+              <strong> SELECIONE O TIPO DE REQUISIÇÃO: </strong>
+            </div>
+            <div class="form-group mb-0 nav-breadcrumb-bg
+                            type-alter-list">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoRequisiçaoDoc" id="inlineRadio1"
+                  value="CADASTRAMENTO" required>
+                <label class="form-check-label" for="inlineRadio1">CADASTRAMENTO</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoRequisiçaoDoc" id="inlineRadio2"
+                  value="ALTERAÇÃO">
+                <label class="form-check-label" for="inlineRadio2"> ALTERAÇÃO</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoRequisiçaoDoc" id="inlineRadio3" value="BAIXA">
+                <label class="form-check-label" for="inlineRadio3">BAIXA</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoRequisiçaoDoc" id="inlineRadio4"
+                  value="RECADASTRAMENTO">
+                <label class="form-check-label" for="inlineRadio4">RECADASTRAMENTO</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoRequisiçaoDoc" id="inlineRadio5"
+                  value="SUSPENSÃO">
+                <label class="form-check-label" for="inlineRadio5">SUSPENSÃO</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoRequisiçaoDoc" id="inlineRadio6"
+                  value="REATIVAÇÃO">
+                <label class="form-check-label" for="inlineRadio6">REATIVAÇÃO</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim do Select forms -->
+        <section id="identificacao">
+          <div class="form-item-title">
+            <span class="fas fa-address-card" aria-hidden="true"></span>
+            <h4 class="title-section">IDENTIFICAÇÃO</h4>
+            <hr>
+          </div>
+          <div class="card mb-4 col-lg-4">
+            <!-- Select forms -->
+            <div class="card-body">
+              <div class="alert p-0" role="alert">
+                <span class="fas fa-exclamation-circle mr-1"></span>
+                <strong> Tipo de Conribuinte: </strong>
+              </div>
+              <div class="form-group mb-0 nav-breadcrumb-bg
+                                type-alter-list">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipoContribuinte" id="tipoContribuinte1"
+                    value="MEI" required>
+                  <label class="form-check-label" for="tipoContribuinte1">MEI</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipoContribuinte" id="tipoContribuinte2"
+                    value="EPP">
+                  <label class="form-check-label" for="tipoContribuinte2"> EPP</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipoContribuinte" id="tipoContribuinte3"
+                    value="ME">
+                  <label class="form-check-label" for="tipoContribuinte3">ME</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipoContribuinte" id="tipoContribuinte4"
+                    value="OUTROS">
+                  <label class="form-check-label" for="tipoContribuinte4">OUTROS</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group  col-lg-3 col-md-6">
+            <label for="cnpj_cpf_identificacao">CNPJ</label>
+            <input type="text" name="cnpj_cpf_identificacao" class="form-control" id="id_cnpj_cpf_identificacao"
+              minlength="10" maxlength="20" required>
+            <div class="valid-feedback"> Preenchido com sucesso </div>
+            <div class="invalid-feedback"> Forneça uma Informação válida. </div>
+          </div>
+          <div class="form-group col-lg-2 col-md-3">
+            <label for="dataAbertura_identificacao">Data de Abertura</label>
+            <input type="text" name="dataAbertura_identificacao" data-mask="00/00/0000" required class="form-control"
+              id="id_dataAbertura_identificacao" required>
+            <div class="valid-feedback"> Parece bom! </div>
+          </div>
+          <div class="form-group col-lg-12">
+            <label for="nameRazaoSocial_identificacao">Nome / Razão Social</label>
+            <input type="text" name="nameRazaoSocial_identificacao" class="form-control"
+              id="id_nameRazaoSocial_identificacao" required>
+          </div>
+          <div class="form-group col-lg-12">
+            <label for="nameFantasia_identificacao">Nome Fantasia</label>
+            <input type="text" name="nameFantasia_identificacao" class="form-control" id="id_nameFantasia_identificacao"
+              required>
+          </div>
+          <div class="form-group col-lg-12">
+            <label for="email_identificacao">E-mail</label>
+            <input type="email" name="email_identificacao" class="form-control" id="id_email_identificacao" required>
+          </div>
+          <div class="form-group">
+            <label for="obsRelevante_identificacao">Observações Relevantes (Opcional)</label>
+            <textarea class="form-control" id="id_obsRelevante_identificacao" rows="3"
+              placeholder="Digite aqui..."></textarea>
+          </div>
+        </section>
+        <section id="atividadeEconomica">
+          <div class="form-item-title">
+            <span class="fas fa-money-check-alt" aria-hidden="true"></span>
+            <h4 class="title-section">ATIVIDADE ECONOMICA</h4>
+            <hr>
+          </div>
+          <div class="form-group">
+            <label for="select_atividadeEconomica">Código e Descrição da Natureza Jurídica <span
+                class="text-danger">*</span></label>
+            <select id='select_atividadeEconomica' data-width="auto" aria-label="Selecione sua atividade economica"
+              multiple required>
+              <option selected disabled></option>
+              <option value="Indústria">- Indústria</option>
+              <option value="Comércio">- Comércio</option>
+              <option value="Serviços">- Serviços</option>
+              <option value="Indústria/Serviços">- Indústria / Serviços</option>
+              <option value="Indústria/Comércio">- Indústria / Comércio</option>
+              <option value="Comércio/Serviços">- Comércio / Serviços</option>
+              <option value="Aministração Pública em Geral">- Aministração Pública em Geral</option>
+              <option value="Órgão Público do Poder Executivo Federal">- Órgão Público do Poder Executivo Federal
+              </option>
+              <option value="Autarquia">- Autarquia</option>
+              <option value="Cooperativa">- Cooperativa</option>
+              <option value="Entidade Sindical">- Entidade Sindical</option>
+              <option value="Organização Religiosa">- Organização Religiosa</option>
+              <option value="Associação">- Associação</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="select_CNAEs_atividadeEconomica">Selecione o CNAE Principal (Apenas 1) <span
+                class="text-danger">*</span></label>
+            <select id="select_CNAEs_atividadeEconomica" aria-label="Selecione o CNAE principal" class="selectpicker"
+              title="Selecione uma opção" data-live-search="true" multiple required></select>
+          </div>
+          <div class="form-group">
+            <label for="select_CNAEs_secundario_atividadeEconomica">Selecione os CNAEs Secundarios</label>
+            <select id="select_CNAEs_secundario_atividadeEconomica" class="selectpicker show-tick" multiple
+              aria-label="Selecione os CNAE's secundario" data-live-search="true" title="Selecione as opções">
+            </select>
+          </div>
+        </section>
+        <section id="localizacao_das_atividades">
+          <div class="form-group pb-2">
+            <div class="form-item-title">
+              <span class="fas fa-map-marked-alt" aria-hidden="true"></span>
+              <h3>Localização das atividades</h3>
+              <hr>
+            </div>
+            <div class="form-group  col-lg-3 col-md-6">
+              <label for="cep_localizacao_das_atividades">CEP</label>
+              <input type="text" name="cep_localizacao_das_atividades" class="form-control"
+                id="id_cep_localizacao_das_atividades" data-mask="00000-000" maxlength="9" required>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="logradouro_localizacao_das_atividades">Logradouro</label>
+              <input type="text" name="logradouro_localizacao_das_atividades" class="form-control"
+                id="id_logradouro_localizacao_das_atividades" required>
+            </div>
+            <div class="form-group col-lg-3">
+              <label for="numero_localizacao_das_atividades">Número</label>
+              <input type="number" name="numero_localizacao_das_atividades" class="form-control"
+                id="id_numero_localizacao_das_atividades" required>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="complementar_localizacao_das_atividades">Complemento</label>
+              <input type="text" name="complementar_localizacao_das_atividades" class="form-control"
+                id="id_complementar_localizacao_das_atividades">
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="bairro_localizacao_das_atividades">bairro</label>
+              <input type="text" name="bairro_localizacao_das_atividades" class="form-control"
+                id="id_bairro_localizacao_das_atividades" required>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="cidade_localizacao_das_atividades">Cidade</label>
+              <input type="text" name="cidade_localizacao_das_atividades" class="form-control"
+                id="id_cidade_localizacao_das_atividades" required>
+            </div>
+            <div class="form-group col-lg-1 col-md-2">
+              <label for="uf_localizacao_das_atividades">UF</label>
+              <input type="text" name="uf_localizacao_das_atividades" class="form-control"
+                id="id_uf_localizacao_das_atividades" maxlength="2" required>
+            </div>
+            <div class="form-group  col-lg-3 col-md-6">
+              <label for="telefone_localizacao_das_atividades">Telefone </label>
+              <input type="text" name="telefone_localizacao_das_atividades" class="form-control"
+                id="id_telefone_localizacao_das_atividades" required>
+            </div>
+            <div class="form-group d-none">
+              <label for="endrecoIgual_localizacao_das_atividades">Usar esse endereço como Endereço de
+                correspondencia?</label>
+              <div id="endereco_igual" class="col-lg-2">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="endrecoIgual_localizacao_das_atividades"
+                    id="endrecoIgual_op1_localizacao_das_atividades" value="Sim" checked required>
+                  <label class="form-check-label" for="endrecoIgual_op1_localizacao_das_atividades">Sim</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="endrecoIgual_localizacao_das_atividades"
+                    id="endrecoIgual_op2_localizacao_das_atividades" value="Não">
+                  <label class="form-check-label" for="endrecoIgual_op2_localizacao_das_atividades">Não</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="endereco_correspondencia" class="d-none">
+          <div class="form-group">
+            <div class="form-item-title">
+              <span class="far fa-envelope-open" aria-hidden="true"></span>
+              <h3>Endereço de Correspondência</h3>
+              <hr>
+            </div>
+            <div class="form-group  col-lg-3 col-md-6">
+              <label for="cep_endereco_correspondencia">CEP</label>
+              <input type="text" name="cep_endereco_correspondencia" class="form-control"
+                id="id_cep_endereco_correspondencia" data-mask="00000-000">
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="Logradouro_endereco_correspondencia">Logradouro</label>
+              <input type="text" name="Logradouro_endereco_correspondencia" class="form-control"
+                id="id_Logradouro_endereco_correspondencia">
+            </div>
+            <div class="form-group col-lg-3">
+              <label for="numero_endereco_correspondencia">Número</label>
+              <input type="number" name="numero_endereco_correspondencia" class="form-control"
+                id="id_numero_endereco_correspondencia">
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="bairro_endereco_correspondencia">bairro</label>
+              <input type="text" name="bairro_endereco_correspondencia" class="form-control"
+                id="id_bairro_endereco_correspondencia">
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="complemento_endereco_correspondencia">Complemento</label>
+              <input type="text" name="Complemento_endereco_correspondencia" class="form-control"
+                id="id_complemento_endereco_correspondencia">
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="cidade_endereco_correspondencia">Cidade</label>
+              <input type="text" name="cidade_endereco_correspondencia" class="form-control"
+                id="id_cidade_endereco_correspondencia">
+            </div>
+            <div class="form-group col-lg-1 col-md-2">
+              <label for="uf_endereco_correspondencia">UF</label>
+              <input type="text" name="uf_endereco_correspondencia" class="form-control"
+                id="id_uf_endereco_correspondencia" maxlength="2">
+            </div>
+          </div>
+        </section>
+        <section id="proprietario">
+          <div class="form-item-title">
+            <span class="fas fa-user-tie" aria-hidden="true"></span>
+            <h4 class="title-section">SÓCIO/RESPONSÁVEL/PROCURADOR</h4>
+            <hr>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="nomeRazaoSocial_proprietario">Nome/Razão Social</label>
+            <input type="text" name="nomeRazaoSocial_proprietario" class="form-control"
+              id="id_nomeRazaoSocial_proprietario" required>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="nome_mae_proprietario">Nome da Mãe</label>
+            <input type="text" name="nome_mae_proprietario" class="form-control" id="id_nome_mae_proprietario" required>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="select_estado_civil_proprietario">Estado Civil</label>
+            <select id='select_estado_civil_proprietario' class="form-select" aria-label="select example" required>
+              <option selected disabled></option>
+              <option value="Solteiro">Solteiro</option>
+              <option value="Casado">Casado</option>
+              <option value="Separado">Separado</option>
+              <option value="Divorciado">Divorciado</option>
+              <option value="Viúvo">Viúvo</option>
+            </select>
+          </div>
+          <div class="form-group col-lg-2 col-md-3">
+            <label for="data_nascimento_proprietario">Data de Nascimento</label>
+            <input type="date" name="data_nascimento_proprietario" class="form-control"
+              id="id_data_nascimento_proprietario" required>
+          </div>
+          <div class="form-group col-lg-4 col-md-6">
+            <label for="cpf_ou_cnpj_proprietario">CPF</label>
+            <input type="text" name="cpf_ou_cnpj_proprietario" class="form-control" id="id_cpf_ou_cnpj_proprietario"
+              required>
+          </div>
+          <div class="form-group  col-lg-3 col-md-6">
+            <label for="telefone_proprietario">Telefone Comercial</label>
+            <input type="text" name="telefone_proprietario" class="form-control" id="id_telefone_proprietario"
+              data-mask="(00) 0000-0000" required>
+          </div>
+          <div class="form-group  col-lg-3 col-md-6">
+            <label for="telefone_celular_proprietario">Telefone Celular</label>
+            <input type="text" name="telefone_celular_proprietario" class="form-control"
+              id="id_telefone_celular_proprietario" data-mask="(00) 00000-0000" required>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="email_proprietario">E-mail</label>
+            <input type="email" name="email_proprietario" class="form-control" id="id_email_proprietario" required>
+          </div>
+          <div class="form-group  col-lg-3 col-md-6">
+            <label for="cep_proprietario">CEP</label>
+            <input type="text" name="cep_proprietario" class="form-control" id="id_cep_proprietario"
+              data-mask="00000-000" required>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="logradouro_proprietario">Logradouro</label>
+            <input type="text" name="logradouro_proprietario" class="form-control" id="id_logradouro_proprietario"
+              required>
+          </div>
+          <div class="form-group col-lg-2">
+            <label for="num_da_rua_proprietario">Número</label>
+            <input type="number" name="num_da_rua_proprietario" class="form-control" id="id_num_da_rua_proprietario"
+              required>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="complemento_proprietario">Complemento</label>
+            <input type="text" name="complemento_proprietario" class="form-control" id="id_complemento_proprietario">
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="bairro_proprietario">bairro</label>
+            <input type="text" name="bairro_proprietario" class="form-control" id="id_bairro_proprietario" required>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="cidade_proprietario">Cidade</label>
+            <input type="text" name="cidade_proprietario" class="form-control" id="id_cidade_proprietario" required>
+          </div>
+          <div class="form-group  col-lg-1 col-md-2">
+            <label for="uf_proprietario">UF</label>
+            <input type="text" name="uf_proprietario" class="form-control" id="id_uf_proprietario" maxlength="2"
+              required>
+          </div>
+        </section>
+      </div>
+      <section id="termos">
+        <div class="form-item">
+          <div class="form-item-title">
+            <span class="fas fa-file-signature" aria-hidden="true"></span>
+            <h4><strong>Declaração de Responsabilidade</strong></h4>
+            <hr>
+          </div>
+          <div class="form-subitem">
+            <div class="form-check">
+              <input type="checkbox" name="check" class="form-check-input" required id="id_check">
+              <label class="form-check-label" for="id_check">
+                <a style="text-decoration: underline;" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Li
+                  e concordo com a declaração de responsabilidade
+                </a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="py-3 text-center">
+        <button type="submit" id="submit" class="btn btn-secondary">Gerar Requerimento</button>
+      </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><strong>Declaração de Responsabilidade:</strong></h5>
+          </div>
+          <div class="modal-body">
+            <div class="section-content mb-3">
+              <ul class="row data-list list-unstyled">
+                <li class="col-12">
+                  <p class="text-justify">Declaro ter lido e compreendido este termo de responsabilidade e concordo de
+                    forma
+                    integral e expressa com todo o seu conteúdo. Declaro serem verdadeiras as informações por mim
+                    prestadas e
+                    autênticos os documentos apresentados sob pena de responder cível e criminalmente pelas mesmas junto
+                    aos
+                    órgãos competentes conforme artigos 298 e 299 do Código Penal.</p>
+                  <p class="text-justify">Estou ciente que devo cumprir a legislação vigente referente ao ISSQN (Imposto
+                    Sobre
+                    Serviços de Qualquer Natureza) conforme Lei Federal 116/2003 e Lei 1.800/90 (Código Tributário do
+                    Município de
+                    Rondonópolis.)</p>
+                  <p class="text-justify">Que o sistema de Gestão Eletrônica do ISSQN foi implementado para atender as
+                    necessidades de informatização da Secretaria Municipal da Receita/Departamento de Administração
+                    Tributária e
+                    Fiscal e fornece aos usuários, de acordo com suas respectivas necessidades, as ferramentas
+                    necessárias para
+                    enviar ao fisco municipal informações fiscais referentes ao ISSQN através da ferramenta “Declaração
+                    Espontânea
+                    do ISSQN” a fim de que o mesmo possa manter-se em dias com suas obrigações tributárias no que
+                    compete ao
+                    Município de Rondonópolis-MT.</p>
+                  <p class="text-justify">Que para receber o login e senha de acesso ao Sistema de Gestão Eletrônica do
+                    ISSQN,
+                    deverei preencher todas as informações contidas nesse formulário, imprimir, assinar de forma
+                    digital, juntar a
+                    documentação solicitada para este fim e encaminhar para o seguinte endereço de e-mail:
+                    cadastrogeral.rondonopolis@gmail.com</p>
+                  <p class="text-justify">Após aprovação do Cadastro realizado pelo Departamento de Administração
+                    Tributária e
+                    Fiscal receberei através de e-mail o login e senha de acesso ao Sistema de Gestão Eletrônica do
+                    ISSQN bem como
+                    um tutorial explicativo da utilização das ferramentas disponíveis para cumprimento de suas
+                    obrigações
+                    tributárias junto ao Fisco do Município de Rondonópolis-MT.</p>
+                  <p class="text-justify">Que a senha a ser escolhida e gravada no sistema é de uso pessoal,
+                    intransferível e de
+                    conhecimento exclusivo. É da inteira responsabilidade do usuário toda e qualquer informação inserida
+                    no
+                    Sistema de Gestão Eletrônica do ISSQN e toda declaração feita através da utilização dessa
+                    ferramenta, mesmo
+                    que possa ter sido causada pelo fornecimento de sua senha pessoal a terceiros, independente do
+                    motivo.</p>
+                  <p class="text-justify ">Estou ciente dos prazos para declaração do ISSQN (até o dia 10 do mês
+                    seguinte ao fato
+                    gerador) conforme Decreto 9.036/2019 e do recolhimento do imposto devido após declarados sendo que
+                    estes
+                    deverão ser pagos dentro do prazo ora estabelecido (até o dia 15 do mês seguinte ao fato gerador)
+                    conforme
+                    art. 75 da Lei 1.800/90 (Código Tributário Municipal). Caso não sejam pagos dentro desse prazo
+                    seguirão o rito
+                    de cobrança administrativa sendo aplicados os respectivos encargos moratórios conforme previsto na
+                    legislação
+                    vigente, sendo que a cobrança se dará preferencialmente de forma eletrônica através do Sistema de
+                    Gestão do
+                    ISSQN Eletrônico, chegando até a esfera de cobrança judicial conforme Legislação vigente.
+                  </p>
+                  <p class="text-justify">Os valores declarados de maneira indevida ou mesmo solicitações de
+                    cancelamento de
+                    lançamentos indevidos deverão ser solicitados eletronicamente através do Sistema de Gestão
+                    Eletrônica do ISSQN
+                    onde serão analisados pelo fisco municipal.</p>
+                  <p class="text-justify">Por fim que os casos omissos ou eventuais consultas formuladas pelos
+                    contribuintes serão
+                    decididas pela Secretaria Municipal de Receita de Rondonópolis/Departamento de Administração
+                    Tributária e
+                    Fiscal, a qual poderá editar atos normativos complementares visando à melhor compreensão e
+                    operacionalização
+                    do estabelecido neste Termo. </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    <footer class="footer pt-4 pb-2 mt-3"><a href="#" id="rodape" class="sr-only">Início do rodapé</a><div class="container"><div class="my-4 text-center"><button type="button" class="btn btn-top" onclick="$(&quot;body,html&quot;).scrollTop(0);"><span class="fas fa-angle-up mr-1"></span>
+                        Voltar ao Topo
+                    </button></div></div><hr><div class="container"><div class="copyright text-center"><small class="d-block">
+                        Secretaria de Ciência, Tecnologia e Inovação - SECITI
+                    </small><small>
+                        Departamento de Tecnologia da Informação e Modernização Institucional
+                    </small></div></div></footer> -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- Slim Select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+
+
+    <!-- https://igorescobar.github.io/jQuery-Mask-Plugin/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+    <script src="../static/app/js/main.js"></script>
+    <script src="../static/app/js/validation.js"></script>
+</body>
+
+</html>
