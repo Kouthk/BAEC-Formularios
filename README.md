@@ -1,4 +1,4 @@
-## 🗃️ BAEC - Migração de um modulo do sistema BAEC para o formato WEB.
+## 🗃️ BAEC - Migração e adaptação de modulo do sistema BAEC para o formato WEB.
 
 📜 - Formulario para cadastro de empresas externas ao município de Rondonópolis-MT
 	
