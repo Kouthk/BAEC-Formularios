@@ -93,6 +93,7 @@ function isCPF(e) {
     a
   );
 }
+// Atividade economica
 fetch("../json/lista_cnae.json")
   .then((e) => e.json())
   .then((e) => {
