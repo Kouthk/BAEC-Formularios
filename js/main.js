@@ -73,6 +73,10 @@ $("input[id*='id_cpf_ou_cnpj_proprietario']").inputmask({
   mask: ["999.999.999-99"],
 });
 
+$("input[id*='id_telefone_localizacao_das_atividades']").inputmask({
+  mask: ["(99) 9999-9999", "(99) 99999-9999"],
+});
+
 /* let dataLog = fetch("https://viacep.com.br/ws/78700300/json/").then(
   (response) => {
     console.log(response);
