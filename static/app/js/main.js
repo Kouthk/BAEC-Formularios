@@ -4,7 +4,7 @@ let select0 = new SlimSelect({
   searchPlaceholder: "Buscar:",
   limit: 1,
 });
-fetch("../json/natureza_juridica.json")
+fetch("../static/app/json/natureza_juridica.json")
   .then((e) => e.json())
   .then((e) => {
     select0.setData(e);
@@ -94,7 +94,7 @@ function isCPF(e) {
   );
 }
 // Atividade economica
-fetch("../json/lista_cnae.json")
+fetch("../static/app/json/lista_cnae.json")
   .then((e) => e.json())
   .then((e) => {
     select1.setData(e), select2.setData(e);
