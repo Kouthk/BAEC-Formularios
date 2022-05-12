@@ -80,20 +80,19 @@ function isCPF(e) {
   return (
     [9, 10].forEach(function (t) {
       var o,
-        d = 0;
+        i = 0;
       e
         .split(/(?=)/)
         .splice(0, t)
         .forEach(function (e, a) {
-          d += parseInt(e) * (t + 2 - (a + 1));
+          i += parseInt(e) * (t + 2 - (a + 1));
         }),
-        (o = (o = d % 11) < 2 ? 0 : 11 - o) != e.substring(t, t + 1) &&
+        (o = (o = i % 11) < 2 ? 0 : 11 - o) != e.substring(t, t + 1) &&
           (a = !1);
     }),
     a
   );
 }
-// Atividade economica
 fetch("../static/app/json/lista_cnae.json")
   .then((e) => e.json())
   .then((e) => {
@@ -237,14 +236,14 @@ fetch("../static/app/json/lista_cnae.json")
                 select1.set([
                   e.atividade_principal[0].code.replace(/[^\d]+/g, "") +
                     " - " +
-                    e.atividade_principal[0].text,
+                    e.atividade_principal[0].text.replace(/[-]+/g, " "),
                 ]);
               let a = [];
               for (let t = 0; t < e.atividades_secundarias.length; t++)
                 a.push(
                   e.atividades_secundarias[t].code.replace(/[^\d]+/g, "") +
                     " - " +
-                    e.atividades_secundarias[t].text
+                    e.atividades_secundarias[t].text.replace(/[-]+/g, " ")
                 );
               select2.set(a);
             },
