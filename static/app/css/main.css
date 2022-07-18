@@ -1,30 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap");
-/* 
- form {
-  font-family: "Markazi Text", serif;
-  font-size: 1.25rem !important;
-  font-weight: bold;
-} */
-/* 
-.type-alter-list {
-  font-family: "Markazi Text", serif;
-  font-weight: bold;
-  font-size: 1.125rem;
-  display: flex;
-  justify-content: space-between;
-}
 
-.title-section {
-  font-size: 1.35em;
-}
-.form-item-title span {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-}
-
-.form-item-title{
-    margin-top: 1.35em;
-} */
 * {
   box-sizing: border-box;
 }

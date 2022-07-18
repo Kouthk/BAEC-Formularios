@@ -274,3 +274,9 @@ ul.footer-list li a:hover {
     margin-bottom: 0;
   }
 }
+
+.ss-multi-selected{
+  line-height: 1.5;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem !important;
+}
